@@ -1,0 +1,17 @@
+
+
+sva.sv
+fft_wrapper_confg.sv
+fft_wrapper_seq_item.sv
+reset_seq.sv
+######################################################## PUT YOUR SEQUENCES HERE ########################################################
+fft_wrapper_sequencer.sv
+fft_wrapper_driver.sv
+fft_wrapper_monitor.sv
+fft_wrapper_agt.sv
+fft_wrapper_scoreboard.sv
+fft_wrapper_coverage.sv
+fft_wrapper_env.sv
+fft_wrapper_test.sv
+fft_wrapper.v
+fft_wrapper_top.sv

@@ -38,9 +38,7 @@ end
 
 %% ===================================================================
 function [out, fifo, cnt] = sdf_stage(sample, fifo, cnt, Ds, tw, Tbf, Tmul)
-% One SDF stage: delay line in the feedback path of a radix-2 butterfly.
-% Code generation specialises this function per call site, so each stage
-% gets its own types without any code duplication.
+
 
     period = 2*Ds;
     popped = fifo(1);                  % value stored Ds cycles ago
@@ -51,9 +49,12 @@ function [out, fifo, cnt] = sdf_stage(sample, fifo, cnt, Ds, tw, Tbf, Tmul)
         out  = cast(popped, 'like', Tbf);
     else
         % ---- butterfly phase ----
-        k       = cnt - Ds;                                    % 0 .. Ds-1
-        sum_ab  = cast(popped + sample, 'like', Tbf);           % -> out now
-        diff_ab = apply_twiddle(popped - sample, k, Ds, tw, Tmul);
+        k       = cnt - Ds;                                   
+        sum_ab  = bitsra(popped + sample, 1);
+        diff_ab = bitsra(popped - sample, 1);
+        
+        sum_ab  = cast(sum_ab, 'like', Tbf);
+        diff_ab = apply_twiddle(cast(diff_ab, 'like', Tmul), k, Ds, tw, Tmul);
         fifo    = [fifo(2:end), cast(diff_ab, 'like', fifo)];   % -> out later
         out     = sum_ab;
     end

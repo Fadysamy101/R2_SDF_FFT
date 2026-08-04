@@ -14,25 +14,24 @@ function T = sdf_types(mode)
             T = fill_uniform(p);
 
         case 'fixed'
-
-            T.x     = fi([], 1, 3+12, 12);
+            T.x     = fi([], 1, 4+12, 12);
             T.tw    = fi([], 1, 2+14, 14);
-            
+
             T.bf1   = fi([], 1, 4+12, 12);
             T.mul1  = fi([], 1, 4+12, 12);
             T.fifo1 = fi([], 1, 4+12, 12);
-            
+
             T.bf2   = fi([], 1, 4+12, 12);
             T.mul2  = fi([], 1, 4+12, 12);
             T.fifo2 = fi([], 1, 4+12, 12);
-            
-            T.bf3   = fi([], 1, 5+11, 11);
-            T.fifo3 = fi([], 1, 5+11, 11);
-            
-            T.bf4   = fi([], 1, 5+11, 11);
-            T.fifo4 = fi([], 1, 5+11, 11);
-            
-            T.y     = fi([], 1, 5+11,11);
+
+            T.bf3   = fi([], 1, 4+12, 12);
+            T.fifo3 = fi([], 1, 4+12, 12);
+
+            T.bf4   = fi([], 1, 4+12, 12);
+            T.fifo4 = fi([], 1, 4+12, 12);
+
+            T.y     = fi([], 1, 4+12, 12);
         otherwise
             error('sdf_types:badMode', ...
                   'mode must be ''double'', ''single'', or ''fixed''.');

@@ -5,10 +5,10 @@ clear; clc; close all;
 %% ---- Configuration ----
 N       = 16;
 nStages = log2(N);
-D       = N ./ (2.^(1:nStages));   % FIFO depths per stage: [8 4 2 1]
+D       = N ./ (2.^(1:nStages));   
 nSeeds  = 100;
 
-%% ---- Precompute the bit-reversal permutation once ----
+
 brIdx = bit_reverse_index(N);
 T = sdf_types('fixed'); 
 
@@ -31,7 +31,7 @@ for s = 1:nSeeds
     Y        = zeros(1, N);
     Y(brIdx) = Y_bitrev;           % undo bit-reversal via the index table
 
-    Yref = fft(x);
+    Yref = fft(x)/16;
     e    = Y - Yref;
 
     errMax(s)  = max(abs(e));
@@ -48,11 +48,7 @@ fprintf('Mean of per-seed max err : %.3e\n',   mean(errMax));
 fprintf('Mean RMS error           : %.3e\n',   mean(errRMS));
 fprintf('Peak |x| seen            : %.4f\n',   max(peakAbs));
 
-if worstErr < 1e-10
-    fprintf('PASS - matches fft() to floating-point precision.\n');
-else
-    fprintf('FAIL - investigate seed %d.\n', worstSeed);
-end
+
 
 %% ---- Plots ----
 figure('Name','Monte Carlo error summary');
@@ -89,6 +85,11 @@ Yf = double(yf(lat+1:lat+N));
 
 SQNR = 10*log10( sum(abs(Yd).^2) / sum(abs(Yf - Yd).^2) );
 fprintf('SQNR: %.2f dB\n', SQNR);
+if SQNR > 40
+    fprintf('PASS - SQNR is above 40 db');
+else
+    fprintf('FAIL - SQNR is under 40 db');
+end
 
 subplot(2,2,3);
 stem(0:N-1, abs(Yref_w), 'filled'); hold on;

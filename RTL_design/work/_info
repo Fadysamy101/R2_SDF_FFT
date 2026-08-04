@@ -1,0 +1,121 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/johns/Desktop/DD&DV/Internships/ADI/FFT/RTL_design
+vbutterfly
+Z1 !s110 1785849326
+!i10b 1
+!s100 3SE8=24o=608KUigZ4c651
+IX08B[53]3[]Le1H[F<K8o1
+R0
+w1785834064
+8butterfly.v
+Fbutterfly.v
+!i122 2
+L0 4 20
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z4 !s108 1785849326.000000
+!s107 twiddle_rom.v|sdf_stage.v|fft_wrapper.v|cmult.v|butterfly.v|
+Z5 !s90 butterfly.v|cmult.v|fft_wrapper.v|sdf_stage.v|twiddle_rom.v|
+!i113 0
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+vcmult
+R1
+!i10b 1
+!s100 @F05LB4ST_3dF`7:AoJ8b0
+I4>ZXbnD7z;F6Rh?=<9<:O1
+R0
+w1785834061
+8cmult.v
+Fcmult.v
+!i122 2
+L0 8 31
+R2
+R3
+r1
+!s85 0
+31
+R4
+Z8 !s107 twiddle_rom.v|sdf_stage.v|fft_wrapper.v|cmult.v|butterfly.v|
+R5
+!i113 0
+R6
+R7
+vfft_wrapper
+R1
+!i10b 1
+!s100 WT[nkcA^3m>n4jj7@lKZX0
+IimKzb^ZHE]e>GPRcLkIYQ1
+R0
+w1785834047
+8fft_wrapper.v
+Ffft_wrapper.v
+!i122 2
+L0 3 87
+R2
+R3
+r1
+!s85 0
+31
+R4
+R8
+R5
+!i113 0
+R6
+R7
+vsdf_stage
+R1
+!i10b 1
+!s100 JZHgjiRF8ccCo_72cIW2Z2
+I2:ObLnCCg?IMHnM2=[gbn2
+R0
+w1785847906
+8sdf_stage.v
+Fsdf_stage.v
+!i122 2
+L0 26 124
+R2
+R3
+r1
+!s85 0
+31
+R4
+R8
+R5
+!i113 0
+R6
+R7
+vtwiddle_rom
+R1
+!i10b 1
+!s100 i[LVXP`Z]LSM`B`?LG6Rj1
+IRgTYDz2ISdJd`N5aI2<312
+R0
+w1785834056
+8twiddle_rom.v
+Ftwiddle_rom.v
+!i122 2
+L0 4 92
+R2
+R3
+r1
+!s85 0
+31
+R4
+R8
+R5
+!i113 0
+R6
+R7

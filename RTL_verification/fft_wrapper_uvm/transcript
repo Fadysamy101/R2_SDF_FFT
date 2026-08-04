@@ -1,0 +1,40 @@
+# do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:53:00 on Aug 04,2026
+# vlog -f src_files.list "+cover" -covercells 
+# -- Compiling module sva
+# -- Compiling package fft_wrapper_configuration
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Note: (vlog-2286) fft_wrapper_confg.sv(3): Using implicit +incdir+C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package fft_wrapper_sequence_item
+# -- Compiling package reset_sequence
+# -- Importing package fft_wrapper_sequence_item
+# -- Compiling package fft_wrapper_sequencer
+# -- Compiling package fft_wrapper_drive
+# -- Importing package fft_wrapper_configuration
+# -- Compiling package fft_wrapper_monitor
+# -- Compiling package fft_wrapper_agtt
+# -- Importing package fft_wrapper_drive
+# -- Importing package fft_wrapper_sequencer
+# -- Importing package fft_wrapper_monitor
+# -- Compiling package fft_wrapper_scoreborad_pck
+# -- Compiling package fft_wrapper_coverage_pkg
+# -- Compiling package fft_wrapper_env_pac
+# -- Importing package fft_wrapper_agtt
+# -- Importing package fft_wrapper_coverage_pkg
+# -- Importing package fft_wrapper_scoreborad_pck
+# -- Compiling package fft_wrapper_test_pkg
+# -- Importing package fft_wrapper_env_pac
+# -- Importing package reset_sequence
+# ** Error: (vlog-7) Failed to open design unit file "fft_wrapper.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 18:53:00 on Aug 04,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_2021.1/win64/vlog failed.
+# Error in macro ./run.do line 2
+# C:/questasim64_2021.1/win64/vlog failed.
+#     while executing
+# "vlog -f src_files.list +cover -covercells"
+# invalid command name "vlog"
