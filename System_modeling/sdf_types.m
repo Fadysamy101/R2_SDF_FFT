@@ -14,24 +14,35 @@ function T = sdf_types(mode)
             T = fill_uniform(p);
 
         case 'fixed'
-            T.x     = fi([], 1, 4+12, 12);
-            T.tw    = fi([], 1, 2+14, 14);
 
-            T.bf1   = fi([], 1, 4+12, 12);
-            T.mul1  = fi([], 1, 4+12, 12);
-            T.fifo1 = fi([], 1, 4+12, 12);
+    % Input
+    T.x     = fi([], 1, 16, 13);
 
-            T.bf2   = fi([], 1, 4+12, 12);
-            T.mul2  = fi([], 1, 4+12, 12);
-            T.fifo2 = fi([], 1, 4+12, 12);
+    % Twiddle ROM
+    T.tw    = fi([], 1, 16, 14);
 
-            T.bf3   = fi([], 1, 4+12, 12);
-            T.fifo3 = fi([], 1, 4+12, 12);
+    % Stage 1
+    T.bf1   = fi([], 1, 16, 13);
+    T.mul1  = fi([], 1, 16, 13);
+    T.fifo1 = fi([], 1, 16, 13);
 
-            T.bf4   = fi([], 1, 4+12, 12);
-            T.fifo4 = fi([], 1, 4+12, 12);
+    % Stage 2
+    T.bf2   = fi([], 1, 16, 14);
+    T.mul2  = fi([], 1, 16, 13);
+    T.fifo2 = fi([], 1, 16, 13);
 
-            T.y     = fi([], 1, 4+12, 12);
+    % Stage 3
+    T.bf3   = fi([], 1, 16, 14);
+    T.mul3  = fi([], 1, 16, 14);
+    T.fifo3 = fi([], 1, 16, 14);
+
+    % Stage 4
+    T.bf4   = fi([], 1, 16, 15);
+    T.mul4  = fi([], 1, 16, 14);
+    T.fifo4 = fi([], 1, 16, 14);
+
+    % Output
+    T.y     = fi([], 1, 16, 15);
         otherwise
             error('sdf_types:badMode', ...
                   'mode must be ''double'', ''single'', or ''fixed''.');

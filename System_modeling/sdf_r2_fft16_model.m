@@ -30,8 +30,9 @@ for s = 1:nSeeds
     Y_bitrev = y(latency+1 : latency+N);
     Y        = zeros(1, N);
     Y(brIdx) = Y_bitrev;           % undo bit-reversal via the index table
+    Y = Y*16;
 
-    Yref = fft(x)/16;
+    Yref = fft(x);
     e    = Y - Yref;
 
     errMax(s)  = max(abs(e));
