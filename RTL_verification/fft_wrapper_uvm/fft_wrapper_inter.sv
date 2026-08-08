@@ -7,6 +7,7 @@ interface fft_wrapper_inter #(parameter int DATA_WIDTH = 16) (input bit clk);
     logic                          en;
     logic signed [DATA_WIDTH-1:0]  in_re;
     logic signed [DATA_WIDTH-1:0]  in_im;
+  
 
     // driven by the DUT -> must be nets
     wire  signed [DATA_WIDTH-1:0]  out_re;

@@ -1,33 +1,11 @@
 //============================================================================
-// fft_wrapper_scoreboard.sv
-//
-// Two checks run side by side on the same stream:
-//
-//  (1) BIT-EXACT, every enabled cycle.
-//      The golden model is stepped once per enabled clock and out_re/out_im
-//      must match exactly. This catches wrong coefficients, wrong twiddle
-//      indices, wrong scaling - anything.
-//
-//  (2) FRAME / SQNR, every 16 outputs.
-//      The 16 outputs are un-bit-reversed and compared against a double
-//      precision DFT of the 16 inputs that produced them. This check knows
-//      nothing about the fixed-point implementation, so it still holds even
-//      if someone "fixes" the bit-exact model by copying the RTL. It is also
-//      what turns a pile of LSB mismatches into a number an FFT person can
-//      judge: SQNR in dB.
-//
-// Cycle accounting (n = number of enabled cycles since reset deasserted):
-//      inputs  of frame f occupy n = 16f .. 16f+15
-//      outputs of frame f occupy n = 16f+15 .. 16f+30    (latency 15)
-// so the outputs of a frame overlap the inputs of the next one - that is
-// normal for an SDF pipeline and is why the previous input frame is kept.
-//============================================================================
+`timescale 1ns/1ps
 package fft_wrapper_scoreborad_pck;
 
     import uvm_pkg::*;
     `include "uvm_macros.svh"
     import fft_wrapper_sequence_item::*;
-    import fft_ref_pkg::*;
+
 
     class fft_wrapper_scoreborad extends uvm_scoreboard;
 
@@ -36,233 +14,205 @@ package fft_wrapper_scoreborad_pck;
         uvm_analysis_export   #(fft_wrapper_seq_item) sb_export;
         uvm_tlm_analysis_fifo #(fft_wrapper_seq_item) sb_fifo;
         fft_wrapper_seq_item item;
+        virtual fft_wrapper_inter vif;
+       
 
-        //---- bit-exact tallies ----------------------------------------
-        int correct_count = 0;
-        int wrong_count   = 0;
-        int reported      = 0;
-        int MAX_REPORTED  = 20;      // then go quiet and just count
+        logic [15:0] exp_re [0:3500];
+        logic [15:0] exp_im [0:3500];
 
-        //---- frame tallies --------------------------------------------
-        int  frames_checked = 0;
-        int  frames_failed  = 0;
-        real worst_bin_err  = 0.0;   // real units
-        real worst_sqnr     = 1.0e9; // dB
-        int  worst_frame    = -1;
+        string vec_dir = "../../System_modeling/vectors";
+        int    N           = 16;
+        int    n_frames    = 0;
+        int    data_wl     = 16;
+        int    latency     = 15;
+        int    n_expected  = 0;   // n_frames * N
 
-        //---- pass criteria --------------------------------------------
-        // 0.02 in real units == 82 LSB of Q4.12. Generous for a correct
-        // 16-point fixed-point FFT (a few LSB is typical) and still tight
-        // enough that a structural error cannot slip through.
-        real frame_tol = 0.02;
-        real sqnr_min  = 40.0;       // dB, the figure the MATLAB model checks
+        // Allowed |error| in LSBs. 0 = bit-exact. Bump to 1-2 if the RTL
+        // complex multiplier truncates at a different point than the model.
+        int    tol_lsb     = 0;
 
-        //---- state ----------------------------------------------------
-        fft_ref_model ref_model;
-        int  n = 0;                  // enabled cycles since reset
-        int  stall_cycles = 0;
-        int  reset_cycles = 0;
+        // ---- Running state ---------------------------------------------
+        int unsigned idx        = 0;   // index into the golden arrays
+        int unsigned n_compared = 0;
+        int unsigned n_mismatch = 0;
+        int          worst_re   = 0;
+        int          worst_im   = 0;
 
-        real x_cur_re  [NPT], x_cur_im  [NPT];   // frame being fed in
-        real x_prev_re [NPT], x_prev_im [NPT];   // frame whose outputs are due
-        real y_re      [NPT], y_im      [NPT];   // outputs, bit-reversed order
 
-        function new(string name = "fft_wrapper_scoreborad", uvm_component parent = null);
+        function new(  string name = "fft_wrapper_scoreborad", uvm_component parent = null );
             super.new(name, parent);
         endfunction
 
+
         function void build_phase(uvm_phase phase);
             super.build_phase(phase);
+            `uvm_info(get_type_name(), "fft_wrapper scoreboard build phase", UVM_LOW)
+
             sb_export = new("sb_export", this);
             sb_fifo   = new("sb_fifo",   this);
-            ref_model = new(RND_FLOOR, OVF_WRAP);
+            if (!uvm_config_db#(virtual fft_wrapper_inter)::get(this,"","fft_wrapper_test_vif",vif))
+            `uvm_fatal(get_type_name(), "Failed to get virtual interface")
+            // Directory can be overridden from the test or the command line:
+            //   +VEC_DIR=../vectors        or  uvm_config_db set of "vec_dir"
+            void'(uvm_config_db #(string)::get(this, "", "vec_dir", vec_dir));
+            void'($value$plusargs("VEC_DIR=%s", vec_dir));
+            void'($value$plusargs("TOL_LSB=%d", tol_lsb));
 
-            void'($value$plusargs("FRAME_TOL=%f", frame_tol));
-            void'($value$plusargs("SQNR_MIN=%f",  sqnr_min));
-            void'($value$plusargs("MAX_ERRORS=%d", MAX_REPORTED));
+            load_meta();
+            load_vectors();
         endfunction
+
 
         function void connect_phase(uvm_phase phase);
             super.connect_phase(phase);
             sb_export.connect(sb_fifo.analysis_export);
         endfunction
 
-        //--------------------------------------------------------------------
-        task run_phase(uvm_phase phase);
-            data_t exp_re, exp_im;
-            int    f0, j;
 
+        // ----------------------------------------------------------------
+        // meta.txt is "KEY value" per line, written by gen_fft_vectors.m
+        // ----------------------------------------------------------------
+        function void load_meta();
+            int    fd;
+            string key;
+            int    val;
+            string path;
+
+            path = {vec_dir, "/meta.txt"};
+            fd   = $fopen(path, "r");
+
+       
+
+            while ($fscanf(fd, "%s %d", key, val) == 2) begin
+                case (key)
+                    "N"       : N        = val;
+                    "FRAMES"  : n_frames = val;
+                    "DATA_WL" : data_wl  = val;
+                    "LATENCY" : latency  = val;
+                    default   : ; // ORDER_IN / ORDER_OUT are strings, skipped
+                endcase
+            end
+            $fclose(fd);
+
+            n_expected = N * n_frames;
+
+   
+
+            `uvm_info(get_type_name(),
+                $sformatf("meta: N=%0d frames=%0d width=%0d latency=%0d -> %0d samples",
+                          N, n_frames, data_wl, latency, n_expected), UVM_LOW)
+        endfunction
+
+
+        function void load_vectors();
+            // Fill with X first so a short file shows up as a mismatch
+            // rather than silently comparing against zeros.
+            foreach (exp_re[i]) begin
+                exp_re[i] = 'x;
+                exp_im[i] = 'x;
+            end
+
+
+            $readmemh({vec_dir, "/output_re.hex"}, exp_re);
+            $readmemh({vec_dir, "/output_im.hex"}, exp_im);
+
+            if ($isunknown(exp_re[0]) || $isunknown(exp_im[0]))
+                `uvm_fatal(get_type_name(),
+                    $sformatf("Golden vectors not loaded from %s - check the path",
+                              vec_dir))
+
+            `uvm_info(get_type_name(),
+                $sformatf("Loaded golden output vectors from %s", vec_dir), UVM_LOW)
+        endfunction
+
+
+        // ----------------------------------------------------------------
+        task run_phase(uvm_phase phase);
             super.run_phase(phase);
+             repeat (latency) @(posedge vif.clk);
             forever begin
                 sb_fifo.get(item);
-
-                // ---- reset ------------------------------------------------
-                if (item.rst_n !== 1'b1) begin
-                    ref_model.reset();
-                    n = 0;
-                    reset_cycles++;
-                    continue;
-                end
-
-                // ---- stalled: the DUT consumed nothing, out is meaningless -
-                if (item.en !== 1'b1) begin
-                    stall_cycles++;
-                    continue;
-                end
-
-                // ---- (1) bit-exact ----------------------------------------
-                ref_model.step(item.in_re, item.in_im, exp_re, exp_im);
-
-                if (exp_re !== item.out_re || exp_im !== item.out_im) begin
-                    wrong_count++;
-                    if (reported < MAX_REPORTED) begin
-                        reported++;
-                        `uvm_error("SB_EXACT",
-                            $sformatf({"cycle n=%0d (frame %0d, phase %0d): ",
-                                       "in=(%0d,%0d) exp=(%0d,%0d) got=(%0d,%0d) ",
-                                       "delta=(%0d,%0d)"},
-                                       n, n/NPT, n%NPT,
-                                       item.in_re, item.in_im,
-                                       exp_re, exp_im, item.out_re, item.out_im,
-                                       item.out_re - exp_re, item.out_im - exp_im))
-                        if (reported == MAX_REPORTED)
-                            `uvm_info("SB_EXACT",
-                                "error cap reached - further mismatches counted silently",
-                                UVM_NONE)
-                    end
-                end
-                else begin
-                    correct_count++;
-                end
-
-                // ---- (2) frame bookkeeping --------------------------------
-                if (n % NPT == 0) begin              // rotate: the frame just
-                    x_prev_re = x_cur_re;            // finished becomes the one
-                    x_prev_im = x_cur_im;            // whose outputs are due
-                end
-                x_cur_re[n % NPT] = q12_to_real(item.in_re);
-                x_cur_im[n % NPT] = q12_to_real(item.in_im);
-
-                if (n >= LATENCY) begin
-                    f0 = (n - LATENCY) / NPT;
-                    j  = (n - LATENCY) % NPT;
-                    y_re[j] = q12_to_real(item.out_re);
-                    y_im[j] = q12_to_real(item.out_im);
-                    if (j == NPT-1) check_frame(f0);
-                end
-
-                n++;
+                if(item.rst_n==1'b1)
+                compare_sample(item);
             end
         endtask
 
-        //--------------------------------------------------------------------
-        // Independent frame check: un-bit-reverse, compare against an ideal
-        // DFT, report worst bin error and SQNR.
-        //--------------------------------------------------------------------
-        function void check_frame(int f0);
-            real yn_re  [NPT], yn_im  [NPT];    // natural bin order
-            real ref_re [NPT], ref_im [NPT];
-            real er, ei, e2, sig2, err2, emax, sqnr;
-            int  kmax;
-            bit  fail;
 
-            // The DUT emits bins in bit-reversed order.
-            for (int jj = 0; jj < NPT; jj++) begin
-                yn_re[bitrev4(jj)] = y_re[jj];
-                yn_im[bitrev4(jj)] = y_im[jj];
+        function void compare_sample(fft_wrapper_seq_item tr);
+            int signed got_re, got_im, ref_re, ref_im;
+            int        d_re,   d_im;
+            int        frame,  bin;
+
+            if (idx >= n_expected) begin
+                `uvm_error(get_type_name(),
+                    $sformatf("DUT produced sample %0d but only %0d golden samples exist",
+                              idx, n_expected))
+                return;
             end
+            
+            // ---- adjust these two lines to your seq_item field names ----
+            got_re = $signed(tr.out_re);
+            got_im = $signed(tr.out_im);
+            // -------------------------------------------------------------
 
-            ideal_dft(x_prev_re, x_prev_im, ref_re, ref_im);
+            ref_re = $signed(exp_re[idx]);
+            ref_im = $signed(exp_im[idx]);
 
-            sig2 = 0.0;
-            err2 = 0.0;
-            emax = 0.0;
-            kmax = 0;
-            for (int k = 0; k < NPT; k++) begin
-                er = yn_re[k] - ref_re[k];
-                ei = yn_im[k] - ref_im[k];
-                e2 = er*er + ei*ei;
-                err2 += e2;
-                sig2 += ref_re[k]*ref_re[k] + ref_im[k]*ref_im[k];
-                if ($sqrt(e2) > emax) begin
-                    emax = $sqrt(e2);
-                    kmax = k;
-                end
-            end
+            d_re = (got_re > ref_re) ? (got_re - ref_re) : (ref_re - got_re);
+            d_im = (got_im > ref_im) ? (got_im - ref_im) : (ref_im - got_im);
 
-            frames_checked++;
-            fail = 0;
+            if (d_re > worst_re) worst_re = d_re;
+            if (d_im > worst_im) worst_im = d_im;
 
-            if (emax > worst_bin_err) begin
-                worst_bin_err = emax;
-                worst_frame   = f0;
-            end
-            if (emax > frame_tol) fail = 1;
+            frame = idx / N;
+            bin   = idx % N;   // NOTE: bit-reversed bin index, not natural
 
-            // SQNR only means something if the frame carries energy.
-            if (sig2 > 0.0) begin
-                sqnr = (err2 > 0.0) ? 10.0*$log10(sig2/err2) : 999.0;
-                if (sqnr < worst_sqnr) worst_sqnr = sqnr;
-                if (sqnr < sqnr_min)   fail = 1;
+            if (d_re > tol_lsb || d_im > tol_lsb) begin
+                n_mismatch++;
+                `uvm_error(get_type_name(),
+                    $sformatf(
+                        "MISMATCH sample %0d (rst_n %0d, frame %0d, br-bin %0d): got %0d + %0di, exp %0d + %0di, delta %0d/%0d",
+                        idx, item.rst_n, frame, bin,
+                        got_re, got_im,
+                        ref_re, ref_im,
+                        d_re, d_im
+                    )
+                )
             end
             else begin
-                sqnr = 999.0;
+                `uvm_info(get_type_name(),
+                    $sformatf(
+                        "MATCH sample %0d (frame %0d, br-bin %0d): %0d + %0di",
+                        idx, frame, bin,
+                        got_re, got_im
+                    ),
+                    UVM_HIGH
+                )
             end
 
-            if (fail) begin
-                frames_failed++;
-                if (reported < MAX_REPORTED) begin
-                    reported++;
-                    `uvm_error("SB_FRAME",
-                        $sformatf({"frame %0d FAILED: worst bin k=%0d |err|=%.6f ",
-                                   "(tol %.6f), SQNR=%.2f dB (min %.2f dB)\n",
-                                   "      got  X[%0d] = %.6f %+.6fj\n",
-                                   "      want X[%0d] = %.6f %+.6fj"},
-                                   f0, kmax, emax, frame_tol, sqnr, sqnr_min,
-                                   kmax, yn_re[kmax],  yn_im[kmax],
-                                   kmax, ref_re[kmax], ref_im[kmax]))
-                end
-            end
-            else begin
-                `uvm_info("SB_FRAME",
-                    $sformatf("frame %0d OK: worst |err|=%.6f  SQNR=%.2f dB",
-                              f0, emax, sqnr), UVM_HIGH)
-            end
+            idx++;
+            n_compared++;
         endfunction
 
-        //--------------------------------------------------------------------
+
         function void report_phase(uvm_phase phase);
-            int ovf;
             super.report_phase(phase);
-            ovf = ref_model.ovf_total();
 
-            `uvm_info("SB", $sformatf({"\n",
-                "  ================ FFT SCOREBOARD =================\n",
-                "   cycles checked (en=1)   : %0d\n",
-                "   stalled cycles (en=0)   : %0d\n",
-                "   reset cycles            : %0d\n",
-                "   -- bit exact ------------------------------------\n",
-                "   matched                 : %0d\n",
-                "   mismatched              : %0d\n",
-                "   -- frame / DFT ----------------------------------\n",
-                "   frames checked          : %0d\n",
-                "   frames failed           : %0d\n",
-                "   worst bin error         : %.6f  (frame %0d, tol %.6f)\n",
-                "   worst SQNR              : %.2f dB (min %.2f dB)\n",
-                "   -- range ----------------------------------------\n",
-                "   golden-model overflows  : %0d\n",
-                "  ================================================="},
-                correct_count + wrong_count, stall_cycles, reset_cycles,
-                correct_count, wrong_count,
-                frames_checked, frames_failed,
-                worst_bin_err, worst_frame, frame_tol,
-                worst_sqnr, sqnr_min, ovf), UVM_NONE)
+            if (n_compared != n_expected)
+                `uvm_error(get_type_name(), $sformatf(
+                    "Sample count mismatch: compared %0d, expected %0d",
+                    n_compared, n_expected))
 
-            if (ovf > 0)
-                `uvm_warning("SB", $sformatf({"%0d twiddle results did not fit in Q4.12. ",
-                    "cmult.v truncates a 33-bit product into a 16-bit wire, so those ",
-                    "wrap rather than saturate; the MATLAB model saturates."}, ovf))
+            `uvm_info(get_type_name(), $sformatf(
+                "\n  compared  : %0d\n  mismatches: %0d\n  worst dRe : %0d LSB\n  worst dIm : %0d LSB\n  tolerance : %0d LSB",
+                n_compared, n_mismatch, worst_re, worst_im, tol_lsb), UVM_NONE)
+
+            if (n_mismatch == 0 && n_compared == n_expected)
+                `uvm_info(get_type_name(), "*** FFT SCOREBOARD PASS ***", UVM_NONE)
+            else
+                `uvm_info(get_type_name(), "*** FFT SCOREBOARD FAIL ***", UVM_NONE)
         endfunction
+
 
     endclass
 

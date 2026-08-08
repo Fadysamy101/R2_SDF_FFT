@@ -1,0 +1,35 @@
+{
+    "verilog.linting.linter": "verilator",
+    "verilog.linting.path": "C:/msys64/mingw64/bin",
+    "verilog.linting.verilator.arguments": "--sv --Wall --timing -IC:/questasim64_2021.1/verilog_src/uvm-1.2/src",
+    "verilog.linting.verilator.includePath": [
+        "C:/msys64/mingw64/share/verilator/include",
+        "C:/questasim64_2021.1/verilog_src/uvm-1.2/src"
+    ],
+    "verilog.lint.verilator.enabled": true,
+    "verilog.lint.verilator.path": "C:/msys64/mingw64/bin/verilator",
+    "verilog.lint.verilator.args": "--sv --Wall --timing -IC:/questasim64_2021.1/verilog_src/uvm-1.2/src",
+    "verilog.lint.verilator.includes": [
+        "C:/msys64/mingw64/share/verilator/include",
+        "C:/questasim64_2021.1/verilog_src/uvm-1.2/src"
+    ],
+    "verilog.lint.slang.enabled": false,
+    "verilog.includes": [
+        "C:/questasim64_2021.1/verilog_src/uvm-1.2/src"
+    ],
+    "verilog.moduleGlobs": [
+        "./**/*.{sv,v}"
+    ],
+    "verilog.includeGlobs": [
+        "./**/*.{svh}"
+    ],
+    "verilog.excludeGlob": "C:/questasim64_2021.1/**",
+    "systemverilog.compileOnSave": false,
+    "systemverilog.compileOnOpen": false,
+    "systemverilog.disableCompileOnSave": true,
+    "systemverilog.disableLinting": false,
+    "systemverilog.excludeCompiling": "C:/questasim64_2021.1/**",
+    "systemverilog.excludeIndexing": "C:/questasim64_2021.1/**",
+    "verible.arguments": [],
+    "verilog.languageServer.server": "ctags"
+}

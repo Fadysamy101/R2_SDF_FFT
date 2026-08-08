@@ -1,5 +1,3 @@
-
-`timescale 1ns / 1ps
 `default_nettype none
 module twiddle_rom #(
     parameter DEPTH = 8,
@@ -43,8 +41,8 @@ module twiddle_rom #(
                 w_im = 16'sb11_00010011011111;   // -0.9239
             end
             3'd6: begin
-                w_re = 16'sb11_01001011011111;   // -0.7071
-                w_im = 16'sb11_01001011011111;   // -0.7071
+                w_re = 16'sb11_01001010111111;   // -0.7071
+                w_im = 16'sb11_01001010111111;   // -0.7071
             end
             3'd7: begin
                 w_re = 16'sb11_00010011011111;   // -0.9239

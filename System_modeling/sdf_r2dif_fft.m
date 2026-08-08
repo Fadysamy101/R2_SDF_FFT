@@ -29,8 +29,8 @@ function [y, latency] = sdf_r2dif_fft(x, N, D, T) %#codegen
 
         [s1, fifo1, cnt(1)] = sdf_stage(s0, fifo1, cnt(1), D(1), tw1, T.bf1, T.mul1);
         [s2, fifo2, cnt(2)] = sdf_stage(s1, fifo2, cnt(2), D(2), tw2, T.bf2, T.mul2);
-        [s3, fifo3, cnt(3)] = sdf_stage(s2, fifo3, cnt(3), D(3), tw3, T.bf3, T.bf3);
-        [s4, fifo4, cnt(4)] = sdf_stage(s3, fifo4, cnt(4), D(4), tw4, T.bf4, T.bf4);
+        [s3, fifo3, cnt(3)] = sdf_stage(s2, fifo3, cnt(3), D(3), tw3, T.bf3, T.mul3);
+        [s4, fifo4, cnt(4)] = sdf_stage(s3, fifo4, cnt(4), D(4), tw4, T.bf4, T.mul4);
 
         y(c) = cast(s4, 'like', T.y);
     end

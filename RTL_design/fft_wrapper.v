@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 `default_nettype none
 module fft_wrapper #(
     parameter DATA_WIDTH        = 16,
@@ -90,7 +89,7 @@ module fft_wrapper #(
         .clk(clk), .rst_n(rst_n), .en(en),
         .in_re(s3_out_re), .in_im(s3_out_im),
         .w_re({TWIDDLE_WIDTH{1'b0}}), .w_im({TWIDDLE_WIDTH{1'b0}}),
-        .twiddle_addr(),                       // unused
+        .twiddle_addr(),                      
         .out_re(out_re), .out_im(out_im)
     );
 

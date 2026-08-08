@@ -4,6 +4,8 @@
 // One item per clock. Drives on the negedge so the pins are settled well
 // before the posedge that the DUT (and the monitor) sample on.
 //============================================================================
+`timescale 1ns / 1ps
+
 package fft_wrapper_drive;
 
     import uvm_pkg::*;
@@ -24,6 +26,7 @@ package fft_wrapper_drive;
 
         function void build_phase(uvm_phase phase);
             super.build_phase(phase);
+            `uvm_info(get_type_name(), "fft_wrapper driver build phase", UVM_LOW)
         endfunction
 
         task run_phase(uvm_phase phase);

@@ -1,9 +1,5 @@
 //============================================================================
 // sdf_stage.v  -  One Single-path Delay Feedback stage.
-//
-// Direct transcription of sdf_stage() from the MATLAB model.
-//
-// Contents:
 //   - delay RAM, DEPTH complex words, read and written at the same address
 //   - address pointer, wraps every DEPTH cycles (gives DEPTH cycles of delay)
 //   - free-running counter, 0 .. 2*DEPTH-1, the ONLY control logic:
@@ -21,35 +17,31 @@
 // USE_MULT = 0 for stages 3 and 4: their only twiddles are +1 and -j, both
 // pure wiring. No multiplier, no ROM.
 //============================================================================
-`timescale 1ns / 1ps
 `default_nettype none
 module sdf_stage #(
-    parameter DATA_WIDTH             = 16,   // data width
-    parameter DELAY_DEPTH            = 8,    // delay line depth
-    parameter ADDR_WIDTH             = 3,    // address width, = log2(DELAY_DEPTH), minimum 1
-    parameter USE_TWIDDLE_MULTIPLIER = 1,    // 1 for stages 1-2, 0 for stages 3-4
-    parameter TWIDDLE_WIDTH          = 16,   // coefficient width
-    parameter TWIDDLE_FRAC_BITS      = 14    // coefficient fractional bits
+    parameter DATA_WIDTH             = 16,   
+    parameter DELAY_DEPTH            = 8,   
+    parameter ADDR_WIDTH             = 3,   
+    parameter USE_TWIDDLE_MULTIPLIER = 1,   
+    parameter TWIDDLE_WIDTH          = 16,   
+    parameter TWIDDLE_FRAC_BITS      = 14   
 )(
     input  wire                 clk,
     input  wire                 rst_n,
-    input  wire                 en,       // clock enable / data valid
+    input  wire                 en,       
 
     input  wire signed [DATA_WIDTH-1:0] in_re,
     input  wire signed [DATA_WIDTH-1:0] in_im,
 
     input  wire signed [TWIDDLE_WIDTH-1:0] w_re,     // from twiddle_rom, tie to 0 if unused
     input  wire signed [TWIDDLE_WIDTH-1:0] w_im,
-    output wire [ADDR_WIDTH-1:0]        twiddle_addr,  // drives the ROM address
+    output wire [ADDR_WIDTH-1:0]        twiddle_addr, 
 
     output wire signed [DATA_WIDTH-1:0] out_re,
     output wire signed [DATA_WIDTH-1:0] out_im
 );
 
-    //------------------------------------------------------------------
-    //------------------------------------------------------------------
-    // State
-    //------------------------------------------------------------------
+
     reg signed [DATA_WIDTH-1:0] delay_line_re [0:DELAY_DEPTH-1];
     reg signed [DATA_WIDTH-1:0] delay_line_im [0:DELAY_DEPTH-1];
     reg        [ADDR_WIDTH-1:0] delay_ptr;
@@ -60,8 +52,13 @@ module sdf_stage #(
     //------------------------------------------------------------------
     wire butterfly_phase = (phase_counter >= DELAY_DEPTH);      // 0 = load, 1 = butterfly
 
-    // DELAY_DEPTH is a power of two, so subtracting it is just dropping the MSB
-    assign twiddle_addr = phase_counter[ADDR_WIDTH-1:0];
+    // Twiddle index k = phase_counter - DELAY_DEPTH. DELAY_DEPTH is a power of
+    // two, so that subtraction is just dropping the MSB - which needs
+    // ADDR_WIDTH == log2(DELAY_DEPTH). The last stage breaks that: DELAY_DEPTH
+    // is 1, log2 is 0, so k is always 0, but ADDR_WIDTH must still be 1 because
+    // Verilog has no zero-width port. Force k to 0 there.
+    assign twiddle_addr = (DELAY_DEPTH == 1) ? {ADDR_WIDTH{1'b0}}
+                                             : phase_counter[ADDR_WIDTH-1:0];
 
     //------------------------------------------------------------------
     // RAM read (combinational, before the write - gives DEPTH-cycle delay)
@@ -122,7 +119,7 @@ module sdf_stage #(
     wire signed [DATA_WIDTH-1:0] delay_write_re = butterfly_phase ? feedback_re : in_re;   // RAM write data
     wire signed [DATA_WIDTH-1:0] delay_write_im = butterfly_phase ? feedback_im : in_im;
 
-    assign out_re = butterfly_phase ? scaled_sum_re : delayed_re;                 // stage output
+    assign out_re = butterfly_phase ? scaled_sum_re : delayed_re;               
     assign out_im = butterfly_phase ? scaled_sum_im : delayed_im;
 
     //------------------------------------------------------------------

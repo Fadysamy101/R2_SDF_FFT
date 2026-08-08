@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/hudson-trading/slang-server/main/clients/vscode/resources/config.schema.json",
+  "flags": "-f .slang/slang.f",
+  "build": ".slang/slang.f",
+  "index": [
+    {
+      "dirs": ["."],
+      "excludeDirs": ["work", "lint_work"]
+    }
+  ]
+}

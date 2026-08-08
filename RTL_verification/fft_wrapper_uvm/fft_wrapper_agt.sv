@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 package fft_wrapper_agtt;
     import uvm_pkg::*;
     import fft_wrapper_drive::*;
@@ -13,12 +14,14 @@ package fft_wrapper_agtt;
         fft_wrapper_confg cfg;
         fft_wrapper_sqr_class sqr;
         uvm_analysis_port #(fft_wrapper_seq_item) agt_ap;
+        
 
         function new(string name="fft_wrapper_agt", uvm_component parent = null);
             super.new(name,parent);
         endfunction //new()
         function void build_phase(uvm_phase phase);
             super.build_phase(phase);
+            `uvm_info(get_type_name(), "fft_wrapper agent build phase", UVM_LOW)
             
             monitor = fft_wrapper_monitor::type_id::create("mon",this);
 

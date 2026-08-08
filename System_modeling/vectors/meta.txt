@@ -1,0 +1,7 @@
+N          16
+FRAMES     20
+DATA_WL    16
+DATA_FL    13
+LATENCY    15
+ORDER_IN   natural
+ORDER_OUT  bitreversed
