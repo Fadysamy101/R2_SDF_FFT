@@ -16,6 +16,10 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
 !s11f MIXED_VERSIONS
 13
 !s112 1.1
@@ -39,6 +43,7 @@ Z9 o-quiet -auto_acc_if_foreign -work work +acc
 Z10 tCvgOpt 0
 n@_opt
 Z11 OL;O;2021.1;73
+R1
 T_opt1
 R2
 R3
@@ -55,519 +60,566 @@ R10
 n@_opt1
 R11
 R1
-vbutterfly
-Z12 !s110 1786211633
-!i10b 1
-!s100 3SE8=24o=608KUigZ4c651
-ImRb1P7hdLoA3fQBiR]^1U1
-R1
-w1785834064
-8../../RTL_design/butterfly.v
-F../../RTL_design/butterfly.v
-!i122 21
-L0 4 20
-Z13 VDg1SIo80bB@j0V0VzS_@n1
-Z14 OL;L;2021.1;73
-r1
-!s85 0
-31
-Z15 !s108 1786211632.000000
-Z16 !s107 C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|fft_wrapper_top.sv|../../RTL_design/fft_wrapper.v|../../RTL_design/twiddle_rom.v|../../RTL_design/sdf_stage.v|../../RTL_design/cmult.v|../../RTL_design/butterfly.v|fft_wrapper_test.sv|fft_wrapper_env.sv|fft_wrapper_inter.sv|fft_wrapper_scoreboard.sv|fft_wrapper_agt.sv|fft_wrapper_monitor.sv|fft_wrapper_driver.sv|fft_wrapper_sequencer.sv|fft_matlab_seq.sv|fft_wrapper_seq_item.sv|fft_wrapper_confg.sv|sva.sv|
-Z17 !s90 -reportprogress|300|-f|src_files.list|+cover|-covercells|
-!i113 0
-Z18 !s102 +cover -covercells
-Z19 o+cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+T_opt2
+Z12 !s11d & DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 1 & 1 DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 
+Z13 !s11d & DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 1 fft_wrapper_inter 1 C:/Users/johns/Desktop/DD 
+Z14 !s11d DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work fft_wrapper_test_pkg 1 C:/Users/johns/Desktop/DD 1 fft_wrapper_test_pkg 
+Z15 !s11d 1 C:/Users/johns/Desktop/DD 1 & 1 C:/Users/johns/Desktop/DD 
+Z16 !s11d C:/Users/johns/Desktop/DD & 1 DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 1 fft_wrapper_inter 
+Z17 !s11d & DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 1 fft_wrapper_scoreborad_pck 1 DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 
+R13
+Z18 !s11d DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work fft_wrapper_monitor 1 C:/Users/johns/Desktop/DD 1 fft_wrapper_monitor 
+R15
+R16
+Z19 !s11d & DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 1 fft_wrapper_drive 1 DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm/work 
+R13
+Z20 !s11d fft_wrapper_configuration C:/Users/johns/Desktop/DD 0 
+!s110 1786539196
+V4^VK]WFeI1BV1eao4Ub@d1
+R7
+=1-c475ab072dad-6a7c6cbb-2a-1920
+R8
+R9
 R10
-vcmult
-R12
-!i10b 1
-!s100 ja7nX@N1Q0VK:XjeU9Yn^0
-IXA2f_^YQO^c0HMeY8?d0?2
+n@_opt2
+R11
 R1
-w1786210708
-8../../RTL_design/cmult.v
-F../../RTL_design/cmult.v
-!i122 21
-L0 7 32
+T_opt3
+R12
 R13
 R14
-r1
-!s85 0
-31
 R15
 R16
 R17
-!i113 0
+R13
 R18
+R15
+R16
 R19
+R13
+R20
+!s110 1786540157
+VBTIX1]IBbGmjI9nnN6?Ez1
+R7
+=3-c475ab072dad-6a7c707c-274-3a68
+R8
+R9
+R10
+n@_opt3
+R11
+vbutterfly
+Z21 !s110 1786539338
+!i10b 1
+!s100 3SE8=24o=608KUigZ4c651
+ImRb1P7hdLoA3fQBiR]^1U1
+Z22 dC:/Users/johns/Desktop/DD & DV/Internships/ADI/FFT/RTL_verification/fft_wrapper_uvm
+w1785834064
+8../../RTL_design/butterfly.v
+F../../RTL_design/butterfly.v
+!i122 24
+L0 4 20
+Z23 VDg1SIo80bB@j0V0VzS_@n1
+Z24 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z25 !s108 1786539337.000000
+Z26 !s107 C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|fft_wrapper_top.sv|../../RTL_design/fft_wrapper.v|../../RTL_design/twiddle_rom.v|../../RTL_design/sdf_stage.v|../../RTL_design/cmult.v|../../RTL_design/butterfly.v|fft_wrapper_test.sv|fft_wrapper_env.sv|fft_wrapper_inter.sv|fft_wrapper_scoreboard.sv|fft_wrapper_agt.sv|fft_wrapper_monitor.sv|fft_wrapper_driver.sv|fft_wrapper_sequencer.sv|fft_matlab_seq.sv|fft_wrapper_seq_item.sv|fft_wrapper_confg.sv|sva.sv|
+Z27 !s90 -reportprogress|300|-f|src_files.list|+cover|-covercells|
+!i113 0
+Z28 !s102 +cover -covercells
+Z29 o+cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R10
+vcmult
+R21
+!i10b 1
+!s100 ja7nX@N1Q0VK:XjeU9Yn^0
+IXA2f_^YQO^c0HMeY8?d0?2
+R22
+w1786210708
+8../../RTL_design/cmult.v
+F../../RTL_design/cmult.v
+!i122 24
+L0 7 32
+R23
+R24
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 0
+R28
+R29
 R10
 Xfft_sequences_pkg
-Z20 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z21 DXx6 mtiUvm 7 uvm_pkg 0 22 8V[`8]Q0W57le7Z>zYaAj1
-Z22 DXx4 work 25 fft_wrapper_sequence_item 0 22 RSX?96UTWNR8g_1eVVCB>1
-Z23 !s110 1786212955
+Z30 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z31 DXx6 mtiUvm 7 uvm_pkg 0 22 8V[`8]Q0W57le7Z>zYaAj1
+Z32 DXx4 work 25 fft_wrapper_sequence_item 0 22 Kdn:0oH:PfIdLXj39k?3g3
+Z33 !s110 1786540138
 !i10b 1
 !s100 XBTXX]SIf^;XYFSgUm0PT2
 I5ngha?hGhhFK<KF0lO3Z_2
 S1
-R1
-w1786204536
+R22
+w1786399929
 8fft_matlab_seq.sv
 Ffft_matlab_seq.sv
-Z24 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
-Z25 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
-Z26 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
-Z27 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
-Z28 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
-Z29 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
-Z30 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
-Z31 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
-Z32 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
-Z33 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
-Z34 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
-Z35 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
-!i122 22
-Z36 L0 1 0
+Z34 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+Z35 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+Z36 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+Z37 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+Z38 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+Z39 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+Z40 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+Z41 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+Z42 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+Z43 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+Z44 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+Z45 FC:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+!i122 26
+Z46 L0 1 0
 V5ngha?hGhhFK<KF0lO3Z_2
-R14
+R24
 r1
 !s85 0
 31
-Z37 !s108 1786212955.000000
-Z38 !s107 C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|sva.sv|reset_seq.sv|fft_wrapper_top.sv|fft_wrapper_test.sv|fft_wrapper_sequencer.sv|fft_wrapper_seq_item.sv|fft_wrapper_scoreboard.sv|fft_wrapper_monitor.sv|fft_wrapper_inter.sv|fft_wrapper_env.sv|fft_wrapper_driver.sv|fft_wrapper_confg.sv|fft_wrapper_agt.sv|fft_matlab_seq.sv|
-Z39 !s90 -reportprogress|300|fft_matlab_seq.sv|fft_wrapper_agt.sv|fft_wrapper_confg.sv|fft_wrapper_driver.sv|fft_wrapper_env.sv|fft_wrapper_inter.sv|fft_wrapper_monitor.sv|fft_wrapper_scoreboard.sv|fft_wrapper_seq_item.sv|fft_wrapper_sequencer.sv|fft_wrapper_test.sv|fft_wrapper_top.sv|reset_seq.sv|sva.sv|
+Z47 !s108 1786540138.000000
+Z48 !s107 C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|C:/questasim64_2021.1/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|sva.sv|reset_seq.sv|fft_wrapper_top.sv|fft_wrapper_test.sv|fft_wrapper_sequencer.sv|fft_wrapper_seq_item.sv|fft_wrapper_scoreboard.sv|fft_wrapper_monitor.sv|fft_wrapper_inter.sv|fft_wrapper_env.sv|fft_wrapper_driver.sv|fft_wrapper_confg.sv|fft_wrapper_agt.sv|fft_matlab_seq.sv|
+Z49 !s90 -reportprogress|300|fft_matlab_seq.sv|fft_wrapper_agt.sv|fft_wrapper_confg.sv|fft_wrapper_driver.sv|fft_wrapper_env.sv|fft_wrapper_inter.sv|fft_wrapper_monitor.sv|fft_wrapper_scoreboard.sv|fft_wrapper_seq_item.sv|fft_wrapper_sequencer.sv|fft_wrapper_test.sv|fft_wrapper_top.sv|reset_seq.sv|sva.sv|
 !i113 0
-Z40 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z50 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R10
 vfft_wrapper
-R12
+R21
 !i10b 1
 !s100 j0M10g1<PIe[DoU]C@aDI0
 Ib0kImimC[^zWWgIMYJjeN3
-R1
+R22
 w1786079110
 8../../RTL_design/fft_wrapper.v
 F../../RTL_design/fft_wrapper.v
-!i122 21
+!i122 24
 L0 2 95
-R13
-R14
+R23
+R24
 r1
 !s85 0
 31
-R15
-R16
-R17
+R25
+R26
+R27
 !i113 0
-R18
-R19
+R28
+R29
 R10
 Xfft_wrapper_agtt
-R20
-R21
-DXx4 work 25 fft_wrapper_configuration 0 22 PSOUHQOTZM;GY[ZeQEz^H1
-R22
-DXx4 work 17 fft_wrapper_drive 0 22 k8Q314J:BNVLbJOoN`2O40
-Z41 DXx4 work 21 fft_wrapper_sequencer 0 22 V0@mbz`W83ESEezL<oF3<2
-Z42 DXx4 work 19 fft_wrapper_monitor 0 22 U01F5nFJKg1TI[L8cIKe:3
-R23
+R30
+R31
+Z51 DXx4 work 25 fft_wrapper_configuration 0 22 Wh>=I`S@[CbbXajZ=`W]O3
+R32
+Z52 DXx4 work 17 fft_wrapper_drive 0 22 kMhN[TKM][@LBb3zc3TM:1
+Z53 DXx4 work 21 fft_wrapper_sequencer 0 22 >G4>5Yj1WVf8;0CQPRTYF1
+Z54 DXx4 work 19 fft_wrapper_monitor 0 22 ?daif];eHjJg3:99V_7^20
+R33
 !i10b 1
 !s100 Vj?z19JAW^=@M;M;SKMn]2
 I]m[X2_KRoFH>N:mbPPID71
 S1
-R1
+R22
 w1786205915
 8fft_wrapper_agt.sv
 Ffft_wrapper_agt.sv
-R24
-R25
-R26
-R27
-R28
-R29
-R30
-R31
-R32
-R33
 R34
 R35
-!i122 22
-L0 2 0
-V]m[X2_KRoFH>N:mbPPID71
-R14
-r1
-!s85 0
-31
+R36
 R37
 R38
 R39
-!i113 0
 R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+L0 2 0
+V]m[X2_KRoFH>N:mbPPID71
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
 R10
 Xfft_wrapper_configuration
-Z43 !s115 fft_wrapper_inter
-R20
-R21
-R23
+Z55 !s115 fft_wrapper_inter
+R30
+R31
+R33
 !i10b 1
 !s100 @1fG;_4HRCU473T7Ukz8@3
 IWh>=I`S@[CbbXajZ=`W]O3
 S1
-R1
+R22
 w1786206651
 8fft_wrapper_confg.sv
 Ffft_wrapper_confg.sv
-R24
-R25
-R26
-R27
-R28
-R29
-R30
-R31
-R32
-R33
 R34
 R35
-!i122 22
 R36
-VWh>=I`S@[CbbXajZ=`W]O3
-R14
-r1
-!s85 0
-31
 R37
 R38
 R39
-!i113 0
 R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+R46
+VWh>=I`S@[CbbXajZ=`W]O3
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
 R10
 Xfft_wrapper_drive
-R43
-R20
-R21
-Z44 DXx4 work 25 fft_wrapper_configuration 0 22 Wh>=I`S@[CbbXajZ=`W]O3
-R22
-R23
+R55
+R30
+R31
+R51
+R32
+R33
 !i10b 1
 !s100 BD?SBJS0A8_DmX5[;lnEh0
 IkMhN[TKM][@LBb3zc3TM:1
 S1
-R1
+R22
 w1786197001
 8fft_wrapper_driver.sv
 Ffft_wrapper_driver.sv
-R24
-R25
-R26
-R27
-R28
-R29
-R30
-R31
-R32
-R33
 R34
 R35
-!i122 22
-Z45 L0 9 0
-VkMhN[TKM][@LBb3zc3TM:1
-R14
-r1
-!s85 0
-31
+R36
 R37
 R38
 R39
-!i113 0
 R40
-R10
-Xfft_wrapper_env_pac
-R20
-R21
-R44
-R22
-Z46 DXx4 work 17 fft_wrapper_drive 0 22 kMhN[TKM][@LBb3zc3TM:1
 R41
 R42
-Z47 DXx4 work 16 fft_wrapper_agtt 0 22 ]m[X2_KRoFH>N:mbPPID71
-DXx4 work 26 fft_wrapper_scoreborad_pck 0 22 Qn[]^Bi==>JY?[U=Rz^Cl2
-R23
+R43
+R44
+R45
+!i122 26
+Z56 L0 9 0
+VkMhN[TKM][@LBb3zc3TM:1
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
+R10
+Xfft_wrapper_env_pac
+R30
+R31
+R51
+R32
+R52
+R53
+R54
+Z57 DXx4 work 16 fft_wrapper_agtt 0 22 ]m[X2_KRoFH>N:mbPPID71
+Z58 DXx4 work 26 fft_wrapper_scoreborad_pck 0 22 M07mR]KMkDOa<V7<1V<GQ3
+R33
 !i10b 1
 !s100 7TTS:ki9;zTOGngWU7G@21
 IGgSV>C;Rk[VFeJjEK?MYW1
 S1
-R1
+R22
 w1786205922
 8fft_wrapper_env.sv
 Ffft_wrapper_env.sv
-R24
-R25
-R26
-R27
-R28
-R29
-R30
-R31
-R32
-R33
 R34
 R35
-!i122 22
 R36
-VGgSV>C;Rk[VFeJjEK?MYW1
-R14
-r1
-!s85 0
-31
 R37
 R38
 R39
-!i113 0
 R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+R46
+VGgSV>C;Rk[VFeJjEK?MYW1
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
 R10
 Yfft_wrapper_inter
-R20
-R23
+R30
+R33
 !i10b 1
 !s100 h>7lE5>aKz5iGSKX@cJN>3
 I38L4CZ]g9[80PWFXLKG0j0
 S1
-R1
+R22
 w1786207696
 8fft_wrapper_inter.sv
 Ffft_wrapper_inter.sv
-!i122 22
+!i122 26
 L0 4 0
-R13
-R14
+R23
+R24
 r1
 !s85 0
 31
-R37
-R38
-R39
+R47
+R48
+R49
 !i113 0
-R40
+R50
 R10
 Xfft_wrapper_monitor
-R43
-R20
-R21
-R22
-R44
-R23
+R55
+R30
+R31
+R32
+R51
+R33
 !i10b 1
 !s100 o_0Qk2EGo_B]R:e@e5GJo1
 I?daif];eHjJg3:99V_7^20
 S1
-R1
+R22
 w1786207975
 8fft_wrapper_monitor.sv
 Ffft_wrapper_monitor.sv
-R24
-R25
-R26
-R27
-R28
-R29
-R30
-R31
-R32
-R33
 R34
 R35
-!i122 22
-Z48 L0 3 0
-V?daif];eHjJg3:99V_7^20
-R14
-r1
-!s85 0
-31
+R36
 R37
 R38
 R39
-!i113 0
 R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+Z59 L0 3 0
+V?daif];eHjJg3:99V_7^20
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
 R10
 Xfft_wrapper_scoreborad_pck
-R43
-R20
-R21
-R22
-R23
-!i10b 1
-!s100 :QaEQno59hf8?Zh0ARMd@1
-I7l:Zc]<86Ldko=0==8E1[0
-S1
-R1
-w1786206502
-8fft_wrapper_scoreboard.sv
-Ffft_wrapper_scoreboard.sv
-R24
-R25
-R26
-R27
-R28
-R29
+R55
 R30
 R31
 R32
 R33
+!i10b 1
+!s100 MGGM]D:VXOcSj6h19WQT21
+IM07mR]KMkDOa<V7<1V<GQ3
+S1
+R22
+w1786539162
+8fft_wrapper_scoreboard.sv
+Ffft_wrapper_scoreboard.sv
 R34
 R35
-!i122 22
-R48
-V7l:Zc]<86Ldko=0==8E1[0
-R14
-r1
-!s85 0
-31
+R36
 R37
 R38
 R39
-!i113 0
 R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+R59
+VM07mR]KMkDOa<V7<1V<GQ3
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
 R10
 Xfft_wrapper_sequence_item
-R20
-R21
-R23
+R30
+R31
+R33
 !i10b 1
 !s100 E3T0Xg4CnOz^U:<CoHRd40
 IKdn:0oH:PfIdLXj39k?3g3
 S1
-R1
+R22
 w1786207378
 8fft_wrapper_seq_item.sv
 Ffft_wrapper_seq_item.sv
+R34
+R35
+R36
+R37
+R38
+R39
+R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+R56
+VKdn:0oH:PfIdLXj39k?3g3
 R24
-R25
-R26
-R27
-R28
-R29
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
+R10
+Xfft_wrapper_sequencer
 R30
 R31
 R32
 R33
-R34
-R35
-!i122 22
-R45
-VKdn:0oH:PfIdLXj39k?3g3
-R14
-r1
-!s85 0
-31
-R37
-R38
-R39
-!i113 0
-R40
-R10
-Xfft_wrapper_sequencer
-R20
-R21
-Z49 DXx4 work 25 fft_wrapper_sequence_item 0 22 Kdn:0oH:PfIdLXj39k?3g3
-R23
 !i10b 1
 !s100 U?=>_ozU31N]Z?FiKPIPn3
 I>G4>5Yj1WVf8;0CQPRTYF1
 S1
-R1
+R22
 w1786205945
 8fft_wrapper_sequencer.sv
 Ffft_wrapper_sequencer.sv
-R24
-R25
-R26
-R27
-R28
-R29
-R30
-R31
-R32
-R33
 R34
 R35
-!i122 22
 R36
-V>G4>5Yj1WVf8;0CQPRTYF1
-R14
-r1
-!s85 0
-31
 R37
 R38
 R39
-!i113 0
 R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+R46
+V>G4>5Yj1WVf8;0CQPRTYF1
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
 R10
 Xfft_wrapper_test_pkg
-R43
-R20
-R21
-R44
-R49
-R46
-Z50 DXx4 work 21 fft_wrapper_sequencer 0 22 >G4>5Yj1WVf8;0CQPRTYF1
-Z51 DXx4 work 19 fft_wrapper_monitor 0 22 ?daif];eHjJg3:99V_7^20
-R47
-Z52 DXx4 work 26 fft_wrapper_scoreborad_pck 0 22 7l:Zc]<86Ldko=0==8E1[0
-Z53 DXx4 work 19 fft_wrapper_env_pac 0 22 GgSV>C;Rk[VFeJjEK?MYW1
-Z54 DXx4 work 17 fft_sequences_pkg 0 22 5ngha?hGhhFK<KF0lO3Z_2
-Z55 DXx4 work 14 reset_sequence 0 22 5RHLOb0SVWk:SY8Jm@<f82
-R23
-!i10b 1
-!s100 QA;agBHTkQ1UCJ:6OCA]f2
-Ic_QI:bTaOMN3h_LM80m;j1
-S1
-R1
-w1786205950
-8fft_wrapper_test.sv
-Ffft_wrapper_test.sv
-R24
-R25
-R26
-R27
-R28
-R29
+R55
 R30
 R31
-R32
-R33
-R34
-R35
-!i122 22
-R36
-Vc_QI:bTaOMN3h_LM80m;j1
-R14
-r1
-!s85 0
-31
-R37
-R38
-R39
-!i113 0
-R40
-R10
-Xfft_wrapper_top_sv_unit
-R20
-R20
-R21
-R44
-R49
-R46
-R50
 R51
-R47
+R32
 R52
 R53
 R54
-R55
-Z56 DXx4 work 20 fft_wrapper_test_pkg 0 22 c_QI:bTaOMN3h_LM80m;j1
-R23
+R57
+R58
+Z60 DXx4 work 19 fft_wrapper_env_pac 0 22 GgSV>C;Rk[VFeJjEK?MYW1
+Z61 DXx4 work 17 fft_sequences_pkg 0 22 5ngha?hGhhFK<KF0lO3Z_2
+Z62 DXx4 work 14 reset_sequence 0 22 5RHLOb0SVWk:SY8Jm@<f82
+R33
+!i10b 1
+!s100 Re`97gBg3>?[fRAnBB6]12
+ImN@QnjXz3eZ7ENgZ;FJdf0
+S1
+R22
+w1786539982
+8fft_wrapper_test.sv
+Ffft_wrapper_test.sv
+R34
+R35
+R36
+R37
+R38
+R39
+R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+R46
+VmN@QnjXz3eZ7ENgZ;FJdf0
+R24
+r1
+!s85 0
+31
+R47
+R48
+R49
+!i113 0
+R50
+R10
+Xfft_wrapper_top_sv_unit
+R30
+R30
+R31
+R51
+R32
+R52
+R53
+R54
+R57
+R58
+R60
+R61
+R62
+Z63 DXx4 work 20 fft_wrapper_test_pkg 0 22 mN@QnjXz3eZ7ENgZ;FJdf0
+R33
 V:L0_1eL>=C_WO5EOLP^H72
 r1
 !s85 0
@@ -576,160 +628,160 @@ r1
 I:L0_1eL>=C_WO5EOLP^H72
 !i103 1
 S1
-R1
-Z57 w1786207663
-Z58 8fft_wrapper_top.sv
-Z59 Ffft_wrapper_top.sv
+R22
+Z64 w1786207663
+Z65 8fft_wrapper_top.sv
+Z66 Ffft_wrapper_top.sv
+R34
+R35
+R36
+R37
+R38
+R39
+R40
+R41
+R42
+R43
+R44
+R45
+!i122 26
+R46
 R24
-R25
-R26
-R27
-R28
-R29
+31
+R47
+R48
+R49
+!i113 0
+R50
+R10
+Xreset_sequence
+R30
 R30
 R31
 R32
 R33
-R34
-R35
-!i122 22
-R36
-R14
-31
-R37
-R38
-R39
-!i113 0
-R40
-R10
-Xreset_sequence
-R20
-R20
-R21
-R49
-R23
 !i10b 1
 !s100 ]MH_Q5a@F[LRgMbaTKe?43
 I5RHLOb0SVWk:SY8Jm@<f82
 S1
-R1
+R22
 w1785868849
 8reset_seq.sv
 Freset_seq.sv
-R24
-R25
-R26
-R27
-R28
-R29
-R30
-R31
-R32
-R33
 R34
 R35
-!i122 22
-L0 6 0
-V5RHLOb0SVWk:SY8Jm@<f82
-R14
-r1
-!s85 0
-31
+R36
 R37
 R38
 R39
-!i113 0
 R40
-R10
-vsdf_stage
-R12
-!i10b 1
-!s100 WDEBg6YXRPIz;aAPj::5j2
-IH4[Nn1N5O;E8hhBfTG_a_3
-R1
-w1786208766
-8../../RTL_design/sdf_stage.v
-F../../RTL_design/sdf_stage.v
-!i122 21
-L0 21 126
-R13
-R14
+R41
+R42
+R43
+R44
+R45
+!i122 26
+L0 6 0
+V5RHLOb0SVWk:SY8Jm@<f82
+R24
 r1
 !s85 0
 31
-R15
-R16
-R17
+R47
+R48
+R49
 !i113 0
-R18
-R19
+R50
+R10
+vsdf_stage
+R21
+!i10b 1
+!s100 WDEBg6YXRPIz;aAPj::5j2
+IH4[Nn1N5O;E8hhBfTG_a_3
+R22
+w1786208766
+8../../RTL_design/sdf_stage.v
+F../../RTL_design/sdf_stage.v
+!i122 24
+L0 21 126
+R23
+R24
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 0
+R28
+R29
 R10
 vsdf_stage_sva
-R20
-R23
+R30
+R33
 !i10b 1
 !s100 OKV16fhgljm;@RO1mHf8f1
 I393FWe0YOKYBT2fFJ[=B:1
 S1
-R1
-Z60 w1785868959
-Z61 8sva.sv
-Z62 Fsva.sv
-!i122 22
+R22
+Z67 w1785868959
+Z68 8sva.sv
+Z69 Fsva.sv
+!i122 26
 L0 61 57
-R13
-R14
+R23
+R24
 r1
 !s85 0
 31
-R37
-R38
-R39
+R47
+R48
+R49
 !i113 0
-R40
+R50
 R10
 vsva
-R20
-R23
+R30
+R33
 !i10b 1
 !s100 M>OQb0^8?hAe7?kA3`YLF2
 Ii1M]Q5S>V42^53:AUnF6R0
 S1
-R1
-R60
-R61
-R62
-!i122 22
+R22
+R67
+R68
+R69
+!i122 26
 L0 20 37
-R13
-R14
+R23
+R24
 r1
 !s85 0
 31
-R37
-R38
-R39
+R47
+R48
+R49
 !i113 0
-R40
+R50
 R10
 vtop
-R20
-R20
-R21
-R44
-R49
-R46
-R50
+R30
+R30
+R31
 R51
-R47
+R32
 R52
 R53
 R54
-R55
-R56
+R57
+R58
+R60
+R61
+R62
+R63
 DXx4 work 23 fft_wrapper_top_sv_unit 0 22 :L0_1eL>=C_WO5EOLP^H72
+R33
 R23
-R13
 r1
 !s85 0
 !i10b 1
@@ -737,40 +789,40 @@ r1
 I1^Q_21TNj3U0lj52dR=NA0
 !s105 fft_wrapper_top_sv_unit
 S1
-R1
-R57
-R58
-R59
-!i122 22
+R22
+R64
+R65
+R66
+!i122 26
 L0 6 40
-R14
+R24
 31
-R37
-R38
-R39
+R47
+R48
+R49
 !i113 0
-R40
+R50
 R10
 vtwiddle_rom
-R12
+R21
 !i10b 1
 !s100 B`EP<bzU5_R_f6dCMkYCC1
 IF[mjg6ZQOUUPDbNOFI;8=2
-R1
+R22
 w1786211621
 8../../RTL_design/twiddle_rom.v
 F../../RTL_design/twiddle_rom.v
-!i122 21
+!i122 24
 L0 2 92
-R13
-R14
+R23
+R24
 r1
 !s85 0
 31
-R15
-R16
-R17
+R25
+R26
+R27
 !i113 0
-R18
-R19
+R28
+R29
 R10

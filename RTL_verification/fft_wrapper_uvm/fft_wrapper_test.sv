@@ -35,11 +35,19 @@ class fft_wrapper_test extends uvm_test;
     endfunction 
 
     task run_phase (uvm_phase phase);
+        virtual fft_wrapper_inter vif = conf_fft_wrapper.fft_wrapper_test_vif;
         super.run_phase(phase);
         phase.raise_objection(this);
-     
+
         matlab_seq.start(env_fft_wrapper.agt.sqr);
 
+        // The last item is driven on a negedge but the DUT only samples it on
+        // the next posedge, and the SDF pipeline is LATENCY deep behind that.
+        // Keep the clock running (driver holds en=1 on the last item) so the
+        // final frame drains out and the monitor sees it. Waiting on negedges
+        // parks us safely between the last needed posedge and the next one, so
+        // we neither race the monitor nor capture a 321st sample.
+        repeat (conf_fft_wrapper.LATENCY + 1) @(negedge vif.clk);
 
         phase.drop_objection(this);
     endtask

@@ -129,7 +129,7 @@ package fft_wrapper_scoreborad_pck;
         // ----------------------------------------------------------------
         task run_phase(uvm_phase phase);
             super.run_phase(phase);
-             repeat (latency) @(posedge vif.clk);
+           //  repeat (latency) @(posedge vif.clk);
             forever begin
                 sb_fifo.get(item);
                 if(item.rst_n==1'b1)
