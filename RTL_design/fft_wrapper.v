@@ -1,8 +1,8 @@
 `default_nettype none
 module fft_wrapper #(
-    parameter DATA_WIDTH        = 16,
-    parameter TWIDDLE_WIDTH     = 16,
-    parameter TWIDDLE_FRAC_BITS = 14
+    parameter DATA_WIDTH        = 12,
+    parameter TWIDDLE_WIDTH     = 12,
+    parameter TWIDDLE_FRAC_BITS = 11
 )(
     input  wire                 clk,
     input  wire                 rst_n,

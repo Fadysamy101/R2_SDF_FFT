@@ -1,3 +1,4 @@
+fft_cfg_pkg.sv
 sva.sv
 fft_wrapper_confg.sv
 fft_wrapper_seq_item.sv

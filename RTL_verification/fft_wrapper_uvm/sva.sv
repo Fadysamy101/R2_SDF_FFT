@@ -18,7 +18,7 @@
 // Bound to fft_wrapper
 //----------------------------------------------------------------------------
 module sva #(
-    parameter DATA_WIDTH = 16
+    parameter DATA_WIDTH = fft_cfg_pkg::DATA_WIDTH
 )(
     input wire                          clk,
     input wire                          rst_n,

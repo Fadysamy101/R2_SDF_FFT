@@ -1,7 +1,13 @@
 
 `timescale 1ns / 1ps
 
-interface fft_wrapper_inter #(parameter int DATA_WIDTH = 16) (input bit clk);
+// The DEFAULT is what matters here, not the instantiation. `virtual
+// fft_wrapper_inter` is referenced unparameterized in the driver, monitor,
+// test, scoreboard and config, so specialising the instance to #(12) while
+// those handles still point at the #(16) default would be a type mismatch
+// across the whole TB. Changing the default keeps every handle consistent.
+interface fft_wrapper_inter #(parameter int DATA_WIDTH = fft_cfg_pkg::DATA_WIDTH)
+                             (input bit clk);
 
     logic                          rst_n;
     logic                          en;

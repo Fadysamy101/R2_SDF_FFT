@@ -14,9 +14,9 @@ module top ();
 
     fft_wrapper_inter fft_wrapper_test_vif(clk);
     fft_wrapper #(
-        .DATA_WIDTH(16),
-        .TWIDDLE_WIDTH(16),
-        .TWIDDLE_FRAC_BITS(14)
+        .DATA_WIDTH(fft_cfg_pkg::DATA_WIDTH),
+        .TWIDDLE_WIDTH(fft_cfg_pkg::TWIDDLE_WIDTH),
+        .TWIDDLE_FRAC_BITS(fft_cfg_pkg::TWIDDLE_FRAC_BITS)
     ) dut (
         .clk(clk),
         .rst_n(fft_wrapper_test_vif.rst_n),
@@ -27,7 +27,7 @@ module top ();
         .out_im(fft_wrapper_test_vif.out_im)
     );
     sva #(
-        .DATA_WIDTH(16)
+        .DATA_WIDTH(fft_cfg_pkg::DATA_WIDTH)
     ) dut_sva (
         .clk(clk),
         .rst_n(fft_wrapper_test_vif.rst_n),

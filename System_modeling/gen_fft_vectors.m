@@ -21,21 +21,19 @@ N        = 16;
 nStages  = log2(N);
 D        = N ./ (2.^(1:nStages));
 
-DATA_WL  = 16;          % RTL DATA_WIDTH
-DATA_FL  = 13;          % RTL binary point -> s2.13, range [-4, +4)
-                        % <-- set this to match sdf_types('fixed')
-
 nFrames  = 20;          % number of test frames to emit
 inScale  = 0.25;        % pre-scale on randn so |x| stays inside full scale
 outDir   = 'vectors';
 
-T = sdf_types('fixed');
-
-% fimath matching the RTL: truncate, wrap (no saturation logic in the RTL)
-F = fimath('RoundingMethod','Floor', ...
-           'OverflowAction','Wrap', ...
-           'ProductMode','FullPrecision', ...
-           'SumMode','FullPrecision');
+% The geometry lives in sdf_types.m and nowhere else. Deriving it here (rather
+% than restating it) is what stops the vectors and the model from drifting
+% apart -- that drift is what produced 310 silent scoreboard mismatches.
+% meta.txt is written from these same values, and the scoreboard fatals if
+% DATA_WL disagrees with fft_cfg_pkg::DATA_WIDTH.
+T        = sdf_types('fixed');
+DATA_WL  = get(T.x, 'WordLength');
+DATA_FL  = get(T.x, 'FractionLength');
+F        = fimath(T.x);
 
 if ~exist(outDir,'dir'), mkdir(outDir); end
 
@@ -99,12 +97,18 @@ fprintf('Peak |x| used : %.4f  (full scale %.4f)\n', ...
 function write_hex(fre, fim, fcx, vre, vim)
 % hex() on a fi object gives the raw two's-complement bit pattern,
 % zero-padded to ceil(WL/4) digits -- exactly what $readmemh wants.
-    hre = hex(vre);
-    him = hex(vim);
-    for k = 1:size(hre,1)
-        fprintf(fre, '%s\n', hre(k,:));
-        fprintf(fim, '%s\n', him(k,:));
-        fprintf(fcx, '%s%s\n', hre(k,:), him(k,:));   % {re, im}
+%
+% Call it per element. On a fi ARRAY, hex() returns ONE char row with the words
+% blank-separated, not a char matrix -- so the old size(hre,1) loop ran exactly
+% once and output_cplx.hex came out as all N real words concatenated onto all N
+% imaginary words with no separator at the seam. $readmemh is whitespace-
+% agnostic so output_re/_im survived it; _cplx never worked.
+    for k = 1:numel(vre)
+        hr = hex(vre(k));
+        hi = hex(vim(k));
+        fprintf(fre, '%s\n', hr);
+        fprintf(fim, '%s\n', hi);
+        fprintf(fcx, '%s%s\n', hr, hi);   % {re, im}
     end
 end
 

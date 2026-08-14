@@ -27,11 +27,7 @@ module cmult #(
     // One extra bit for the add/sub
     wire signed [DATA_WIDTH+TWIDDLE_WIDTH:0] full_precision_real = real_real_product - imag_imag_product;
     wire signed [DATA_WIDTH+TWIDDLE_WIDTH:0] full_precision_imag = real_imag_product + imag_real_product;
-     
-// Round the Q-format multiplication result before reducing its fractional
-// precision. Adding half of one LSB before the right shift implements
-// round-to-nearest instead of truncation.
-// For TWIDDLE_FRAC_BITS = 14, the rounding offset is 2^13 = 8192.
+
 assign product_re = (full_precision_real + (1 <<< (TWIDDLE_FRAC_BITS - 1))) >>> TWIDDLE_FRAC_BITS;
 assign product_im = (full_precision_imag + (1 <<< (TWIDDLE_FRAC_BITS - 1))) >>> TWIDDLE_FRAC_BITS;
 

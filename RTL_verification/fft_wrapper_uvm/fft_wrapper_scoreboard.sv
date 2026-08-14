@@ -17,13 +17,14 @@ package fft_wrapper_scoreborad_pck;
         virtual fft_wrapper_inter vif;
        
 
-        logic [15:0] exp_re [0:3500];
-        logic [15:0] exp_im [0:3500];
+        logic [fft_cfg_pkg::DATA_WIDTH-1:0] exp_re [0:3500];
+        logic [fft_cfg_pkg::DATA_WIDTH-1:0] exp_im [0:3500];
 
         string vec_dir = "../../System_modeling/vectors";
         int    N           = 16;
         int    n_frames    = 0;
-        int    data_wl     = 16;
+        int    data_wl     = fft_cfg_pkg::DATA_WIDTH;
+        int    data_fl     = 0;
         int    latency     = 15;
         int    n_expected  = 0;   // n_frames * N
 
@@ -88,6 +89,7 @@ package fft_wrapper_scoreborad_pck;
                     "N"       : N        = val;
                     "FRAMES"  : n_frames = val;
                     "DATA_WL" : data_wl  = val;
+                    "DATA_FL" : data_fl  = val;
                     "LATENCY" : latency  = val;
                     default   : ; // ORDER_IN / ORDER_OUT are strings, skipped
                 endcase
@@ -96,11 +98,21 @@ package fft_wrapper_scoreborad_pck;
 
             n_expected = N * n_frames;
 
-   
+            // The golden vectors and the DUT must agree on the word length, or
+            // every comparison is meaningless. Catching it here turns a stale
+            // vector set into one clear line instead of a few hundred
+            // off-by-a-few-LSB mismatches.
+            if (data_wl != fft_cfg_pkg::DATA_WIDTH)
+                `uvm_fatal(get_type_name(), $sformatf(
+                    "Golden vectors were generated at DATA_WL=%0d but the DUT is built at DATA_WIDTH=%0d. Re-run System_modeling/gen_fft_vectors.m.",
+                    data_wl, fft_cfg_pkg::DATA_WIDTH))
 
+            // DATA_FL does not affect the RTL -- the datapath is pure integer
+            // and this comparison is on raw codes -- but log it so a human can
+            // see which binary-point convention the numbers are in.
             `uvm_info(get_type_name(),
-                $sformatf("meta: N=%0d frames=%0d width=%0d latency=%0d -> %0d samples",
-                          N, n_frames, data_wl, latency, n_expected), UVM_LOW)
+                $sformatf("meta: N=%0d frames=%0d s%0d.%0d latency=%0d -> %0d samples",
+                          N, n_frames, data_wl-1-data_fl, data_fl, latency, n_expected), UVM_LOW)
         endfunction
 
 

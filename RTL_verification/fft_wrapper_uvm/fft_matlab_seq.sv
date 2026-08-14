@@ -1,6 +1,7 @@
 package fft_sequences_pkg;
 
     import uvm_pkg::*;
+    import fft_cfg_pkg::*;
     import fft_wrapper_sequence_item::*;
     `include "uvm_macros.svh"
 
@@ -23,8 +24,8 @@ package fft_sequences_pkg;
             int status_re;
             int status_im;
 
-            logic signed [15:0] re_from_file;
-            logic signed [15:0] im_from_file;
+            logic signed [DATA_WIDTH-1:0] re_from_file;
+            logic signed [DATA_WIDTH-1:0] im_from_file;
 
             fd_re = $fopen(input_re_file, "r");
             fd_im = $fopen(input_im_file, "r");

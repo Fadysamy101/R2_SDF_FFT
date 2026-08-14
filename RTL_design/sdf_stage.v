@@ -102,9 +102,8 @@ module sdf_stage #(
                 .product_re    (mult_out_re), .product_im    (mult_out_im)
             );
 
-            // -j : (a,b) -> (b,-a)
-            assign feedback_re = twiddle_is_one ? scaled_diff_re : (twiddle_is_neg_j ?  scaled_diff_im : mult_out_re);
-            assign feedback_im = twiddle_is_one ? scaled_diff_im : (twiddle_is_neg_j ? -scaled_diff_re : mult_out_im);
+            assign feedback_re = mult_out_re;
+            assign feedback_im = mult_out_im;
         end
         else begin : g_nomult
             // Only +1 and -j occur here - pure wiring, no arithmetic

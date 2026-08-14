@@ -1,0 +1,2829 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /top/fft_wrapper_test_vif
+=== Design Unit: work.fft_wrapper_inter
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       7         7         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/fft_wrapper_test_vif --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_inter.sv
+    16              1                          1     
+    18              1                          1     
+    18              2                          1     
+    18              3                          1     
+    18              4                          1     
+    18              5                          1     
+    18              6                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        134       132         2    98.50%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/fft_wrapper_test_vif --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                               clk           1           1      100.00 
+                                                en           0           1       50.00 
+                                       in_im[15-0]           1           1      100.00 
+                                       in_re[15-0]           1           1      100.00 
+                                      out_im[0-15]           1           1      100.00 
+                                      out_re[0-15]           1           1      100.00 
+                                             rst_n           0           1       50.00 
+
+Total Node Count     =         67 
+Toggled Node Count   =         65 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      98.50% (132 of 134 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s1/u_bf
+=== Design Unit: work.butterfly
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         4         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s1/u_bf --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/butterfly.v
+    18              1                        633     
+    19              1                        635     
+    20              1                        633     
+    21              1                        635     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        264       264         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s1/u_bf --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                           delayed_sample_im[0-15]           1           1      100.00 
+                           delayed_sample_re[0-15]           1           1      100.00 
+                             input_sample_im[0-15]           1           1      100.00 
+                             input_sample_re[0-15]           1           1      100.00 
+
+Total Node Count     =        132 
+Toggled Node Count   =        132 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (264 of 264 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s1/g_mult/u_mul
+=== Design Unit: work.cmult
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       8         8         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s1/g_mult/u_mul --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/cmult.v
+    22              1                        952     
+    23              1                        954     
+    24              1                        952     
+    25              1                        954     
+    28              1                        953     
+    29              1                        952     
+    35              1                        953     
+    36              1                        952     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        580       578         2    99.65%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s1/g_mult/u_mul --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                         full_precision_imag[0-32]           1           1      100.00 
+                         full_precision_real[0-32]           1           1      100.00 
+                           imag_imag_product[0-31]           1           1      100.00 
+                           imag_real_product[0-31]           1           1      100.00 
+                               input_data_im[0-15]           1           1      100.00 
+                               input_data_re[0-15]           1           1      100.00 
+                                  product_im[0-15]           1           1      100.00 
+                                  product_re[0-15]           1           1      100.00 
+                           real_imag_product[0-31]           1           1      100.00 
+                           real_real_product[0-31]           1           1      100.00 
+                                  twiddle_im[0-10]           1           1      100.00 
+                                    twiddle_im[11]           0           0        0.00 
+                                 twiddle_im[12-15]           1           1      100.00 
+                                  twiddle_re[0-15]           1           1      100.00 
+
+Total Node Count     =        290 
+Toggled Node Count   =        289 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      99.65% (578 of 580 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s1
+=== Design Unit: work.sdf_stage
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        23        22         1    95.65%
+
+================================Branch Details================================
+
+Branch Coverage for instance /top/dut/u_s1
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+------------------------------------IF Branch------------------------------------
+    106                                     1744     Count coming in to IF
+    106             1                        238     
+    106             2                       1506     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    106                                     1506     Count coming in to IF
+    106             3                        238     
+    106             4                       1268     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    107                                     1743     Count coming in to IF
+    107             1                        238     
+    107             2                       1505     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    107                                     1505     Count coming in to IF
+    107             3                        237     
+    107             4                       1268     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    119                                     1311     Count coming in to IF
+    119             1                        660     
+    119             2                        651     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    120                                     1311     Count coming in to IF
+    120             1                        660     
+    120             2                        651     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    122                                      943     Count coming in to IF
+    122             1                        478     
+    122             2                        465     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    123                                      946     Count coming in to IF
+    123             1                        480     
+    123             2                        466     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    130                                      321     Count coming in to IF
+    130             1                          2     
+    138             1                        319     
+                                         ***0***     All False Count
+Branch totals: 2 hits of 3 branches = 66.66%
+
+------------------------------------IF Branch------------------------------------
+    141                                      319     Count coming in to IF
+    141             1                         39     
+    141             2                        280     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    142                                      319     Count coming in to IF
+    142             1                         19     
+    142             2                        300     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /top/dut/u_s1 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Condition View-------------------
+Line       141 Item    1  (delay_ptr == (8 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+  (delay_ptr == (8 - 1))         Y
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:          1  (delay_ptr == (8 - 1))_0  -                             
+  Row   2:          1  (delay_ptr == (8 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       142 Item    1  (phase_counter == ((2 * 8) - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                        Input Term   Covered  Reason for no coverage   Hint
+                       -----------  --------  -----------------------  --------------
+  (phase_counter == ((2 * 8) - 1))         Y
+
+     Rows:       Hits  FEC Target                          Non-masking condition(s)      
+ ---------  ---------  --------------------                -------------------------     
+  Row   1:          1  (phase_counter == ((2 * 8) - 1))_0  -                             
+  Row   2:          1  (phase_counter == ((2 * 8) - 1))_1  -                             
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      3         3         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /top/dut/u_s1 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Expression View-----------------
+Line       53 Item    1  (phase_counter >= 8)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (phase_counter >= 8)         Y
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (phase_counter >= 8)_0  -                             
+  Row   2:          1  (phase_counter >= 8)_1  -                             
+
+----------------Focused Expression View-----------------
+Line       90 Item    1  (twiddle_addr == 0)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+           Input Term   Covered  Reason for no coverage   Hint
+          -----------  --------  -----------------------  --------------
+  (twiddle_addr == 0)         Y
+
+     Rows:       Hits  FEC Target             Non-masking condition(s)      
+ ---------  ---------  --------------------   -------------------------     
+  Row   1:          1  (twiddle_addr == 0)_0  -                             
+  Row   2:          1  (twiddle_addr == 0)_1  -                             
+
+----------------Focused Expression View-----------------
+Line       91 Item    1  (twiddle_addr == (8 >> 1))
+Expression totals: 1 of 1 input term covered = 100.00%
+
+                  Input Term   Covered  Reason for no coverage   Hint
+                 -----------  --------  -----------------------  --------------
+  (twiddle_addr == (8 >> 1))         Y
+
+     Rows:       Hits  FEC Target                    Non-masking condition(s)      
+ ---------  ---------  --------------------          -------------------------     
+  Row   1:          1  (twiddle_addr == (8 >> 1))_0  -                             
+  Row   2:          1  (twiddle_addr == (8 >> 1))_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      27        27         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s1 --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+    53              1                        321     
+    60              1                        321     
+    66              1                        321     
+    67              1                        321     
+    82              1                        632     
+    83              1                        634     
+    84              1                        632     
+    85              1                        634     
+    90              1                        321     
+    91              1                        321     
+    106             1                       1746     
+    107             1                       1745     
+    119             1                       1313     
+    120             1                       1313     
+    122             1                        944     
+    123             1                        947     
+    129             1                        321     
+    131             1                          2     
+    132             1                          2     
+    133             1                          2     
+    133             2                         16     
+    134             1                         16     
+    135             1                         16     
+    139             1                        319     
+    140             1                        319     
+    141             1                        319     
+    142             1                        319     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        808       740        68    91.58%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s1 --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                                   butterfly_phase           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                                               clk           1           1      100.00 
+                                    delay_ptr[0-2]           1           1      100.00 
+                              delay_write_im[0-15]           1           1      100.00 
+                              delay_write_re[0-15]           1           1      100.00 
+                                  delayed_im[0-15]           1           1      100.00 
+                                  delayed_re[0-15]           1           1      100.00 
+                                                en           0           1       50.00 
+                                 feedback_im[0-15]           1           1      100.00 
+                                 feedback_re[0-15]           1           1      100.00 
+                          g_mult/mult_out_im[0-15]           1           1      100.00 
+                          g_mult/mult_out_re[0-15]           1           1      100.00 
+                                           i[0-31]           0           0        0.00 
+                                       in_im[0-15]           1           1      100.00 
+                                       in_re[0-15]           1           1      100.00 
+                                      out_im[0-15]           1           1      100.00 
+                                      out_re[0-15]           1           1      100.00 
+                                phase_counter[0-3]           1           1      100.00 
+                                             rst_n           0           1       50.00 
+                              scaled_diff_im[0-15]           1           1      100.00 
+                              scaled_diff_re[0-15]           1           1      100.00 
+                               scaled_sum_im[0-15]           1           1      100.00 
+                               scaled_sum_re[0-15]           1           1      100.00 
+                                 twiddle_addr[0-2]           1           1      100.00 
+                                  twiddle_is_neg_j           1           1      100.00 
+                                    twiddle_is_one           1           1      100.00 
+                                        w_im[0-10]           1           1      100.00 
+                                          w_im[11]           0           0        0.00 
+                                       w_im[12-15]           1           1      100.00 
+                                        w_re[0-15]           1           1      100.00 
+
+Total Node Count     =        404 
+Toggled Node Count   =        369 
+Untoggled Node Count =         35 
+
+Toggle Coverage      =      91.58% (740 of 808 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_rom1
+=== Design Unit: work.twiddle_rom
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         9         8         1    88.88%
+
+================================Branch Details================================
+
+Branch Coverage for instance /top/dut/u_rom1
+NOTE: The modification timestamp for source file '../../RTL_design/twiddle_rom.v' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/twiddle_rom.v
+------------------------------------CASE Branch------------------------------------
+    18                                       320     Count coming in to CASE
+    19              1                         40     
+    23              1                         40     
+    27              1                         40     
+    31              1                         40     
+    35              1                         40     
+    39              1                         40     
+    43              1                         40     
+    47              1                         40     
+    51              1                    ***0***     
+Branch totals: 8 hits of 9 branches = 88.88%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      21        19         2    90.47%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_rom1 --
+NOTE: The modification timestamp for source file '../../RTL_design/twiddle_rom.v' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/twiddle_rom.v
+    12              1                        320     
+    13              1                        320     
+    14              1                        320     
+    20              1                         40     
+    21              1                         40     
+    24              1                         40     
+    25              1                         40     
+    28              1                         40     
+    29              1                         40     
+    32              1                         40     
+    33              1                         40     
+    36              1                         40     
+    37              1                         40     
+    40              1                         40     
+    41              1                         40     
+    44              1                         40     
+    45              1                         40     
+    48              1                         40     
+    49              1                         40     
+    52              1                    ***0***     
+    53              1                    ***0***     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         70        68         2    97.14%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_rom1 --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                         addr[0-2]           1           1      100.00 
+                                       w_im[15-12]           1           1      100.00 
+                                          w_im[11]           0           0        0.00 
+                                        w_im[10-0]           1           1      100.00 
+                                        w_re[15-0]           1           1      100.00 
+
+Total Node Count     =         35 
+Toggled Node Count   =         34 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      97.14% (68 of 70 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s2/u_bf
+=== Design Unit: work.butterfly
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         4         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s2/u_bf --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/butterfly.v
+    18              1                        802     
+    19              1                        803     
+    20              1                        802     
+    21              1                        803     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        264       264         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s2/u_bf --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                           delayed_sample_im[0-15]           1           1      100.00 
+                           delayed_sample_re[0-15]           1           1      100.00 
+                             input_sample_im[0-15]           1           1      100.00 
+                             input_sample_re[0-15]           1           1      100.00 
+
+Total Node Count     =        132 
+Toggled Node Count   =        132 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (264 of 264 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s2/g_mult/u_mul
+=== Design Unit: work.cmult
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       8         8         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s2/g_mult/u_mul --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/cmult.v
+    22              1                       1120     
+    23              1                       1121     
+    24              1                       1120     
+    25              1                       1121     
+    28              1                       1114     
+    29              1                       1114     
+    35              1                       1114     
+    36              1                       1114     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        580       570        10    98.27%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s2/g_mult/u_mul --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                         full_precision_imag[0-32]           1           1      100.00 
+                         full_precision_real[0-32]           1           1      100.00 
+                           imag_imag_product[0-31]           1           1      100.00 
+                           imag_real_product[0-31]           1           1      100.00 
+                               input_data_im[0-15]           1           1      100.00 
+                               input_data_re[0-15]           1           1      100.00 
+                                  product_im[0-15]           1           1      100.00 
+                                  product_re[0-15]           1           1      100.00 
+                           real_imag_product[0-31]           1           1      100.00 
+                           real_real_product[0-31]           1           1      100.00 
+                                   twiddle_im[0-5]           1           1      100.00 
+                                     twiddle_im[6]           0           0        0.00 
+                                     twiddle_im[7]           1           1      100.00 
+                                     twiddle_im[8]           0           0        0.00 
+                                     twiddle_im[9]           1           1      100.00 
+                                 twiddle_im[10-11]           0           0        0.00 
+                                    twiddle_im[12]           1           1      100.00 
+                                    twiddle_im[13]           0           0        0.00 
+                                 twiddle_im[14-15]           1           1      100.00 
+                                  twiddle_re[0-15]           1           1      100.00 
+
+Total Node Count     =        290 
+Toggled Node Count   =        285 
+Untoggled Node Count =          5 
+
+Toggle Coverage      =      98.27% (570 of 580 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s2
+=== Design Unit: work.sdf_stage
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        23        22         1    95.65%
+
+================================Branch Details================================
+
+Branch Coverage for instance /top/dut/u_s2
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+------------------------------------IF Branch------------------------------------
+    106                                     2077     Count coming in to IF
+    106             1                        510     
+    106             2                       1567     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    106                                     1567     Count coming in to IF
+    106             3                        509     
+    106             4                       1058     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    107                                     2077     Count coming in to IF
+    107             1                        510     
+    107             2                       1567     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    107                                     1567     Count coming in to IF
+    107             3                        509     
+    107             4                       1058     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    119                                     1607     Count coming in to IF
+    119             1                        783     
+    119             2                        824     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    120                                     1608     Count coming in to IF
+    120             1                        784     
+    120             2                        824     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    122                                     1111     Count coming in to IF
+    122             1                        548     
+    122             2                        563     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    123                                     1112     Count coming in to IF
+    123             1                        549     
+    123             2                        563     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    130                                      321     Count coming in to IF
+    130             1                          2     
+    138             1                        319     
+                                         ***0***     All False Count
+Branch totals: 2 hits of 3 branches = 66.66%
+
+------------------------------------IF Branch------------------------------------
+    141                                      319     Count coming in to IF
+    141             1                         79     
+    141             2                        240     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    142                                      319     Count coming in to IF
+    142             1                         39     
+    142             2                        280     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /top/dut/u_s2 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Condition View-------------------
+Line       141 Item    1  (delay_ptr == (4 - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+  (delay_ptr == (4 - 1))         Y
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:          1  (delay_ptr == (4 - 1))_0  -                             
+  Row   2:          1  (delay_ptr == (4 - 1))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       142 Item    1  (phase_counter == ((2 * 4) - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                        Input Term   Covered  Reason for no coverage   Hint
+                       -----------  --------  -----------------------  --------------
+  (phase_counter == ((2 * 4) - 1))         Y
+
+     Rows:       Hits  FEC Target                          Non-masking condition(s)      
+ ---------  ---------  --------------------                -------------------------     
+  Row   1:          1  (phase_counter == ((2 * 4) - 1))_0  -                             
+  Row   2:          1  (phase_counter == ((2 * 4) - 1))_1  -                             
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      3         3         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /top/dut/u_s2 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Expression View-----------------
+Line       53 Item    1  (phase_counter >= 4)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (phase_counter >= 4)         Y
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (phase_counter >= 4)_0  -                             
+  Row   2:          1  (phase_counter >= 4)_1  -                             
+
+----------------Focused Expression View-----------------
+Line       90 Item    1  (twiddle_addr == 0)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+           Input Term   Covered  Reason for no coverage   Hint
+          -----------  --------  -----------------------  --------------
+  (twiddle_addr == 0)         Y
+
+     Rows:       Hits  FEC Target             Non-masking condition(s)      
+ ---------  ---------  --------------------   -------------------------     
+  Row   1:          1  (twiddle_addr == 0)_0  -                             
+  Row   2:          1  (twiddle_addr == 0)_1  -                             
+
+----------------Focused Expression View-----------------
+Line       91 Item    1  (twiddle_addr == (4 >> 1))
+Expression totals: 1 of 1 input term covered = 100.00%
+
+                  Input Term   Covered  Reason for no coverage   Hint
+                 -----------  --------  -----------------------  --------------
+  (twiddle_addr == (4 >> 1))         Y
+
+     Rows:       Hits  FEC Target                    Non-masking condition(s)      
+ ---------  ---------  --------------------          -------------------------     
+  Row   1:          1  (twiddle_addr == (4 >> 1))_0  -                             
+  Row   2:          1  (twiddle_addr == (4 >> 1))_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      27        27         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s2 --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+    53              1                        321     
+    60              1                        321     
+    66              1                        321     
+    67              1                        321     
+    82              1                        801     
+    83              1                        802     
+    84              1                        801     
+    85              1                        802     
+    90              1                        321     
+    91              1                        321     
+    106             1                       2079     
+    107             1                       2079     
+    119             1                       1608     
+    120             1                       1609     
+    122             1                       1112     
+    123             1                       1113     
+    129             1                        321     
+    131             1                          2     
+    132             1                          2     
+    133             1                          2     
+    133             2                          8     
+    134             1                          8     
+    135             1                          8     
+    139             1                        319     
+    140             1                        319     
+    141             1                        319     
+    142             1                        319     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        802       726        76    90.52%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s2 --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                                   butterfly_phase           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                                               clk           1           1      100.00 
+                                    delay_ptr[0-1]           1           1      100.00 
+                              delay_write_im[0-15]           1           1      100.00 
+                              delay_write_re[0-15]           1           1      100.00 
+                                  delayed_im[0-15]           1           1      100.00 
+                                  delayed_re[0-15]           1           1      100.00 
+                                                en           0           1       50.00 
+                                 feedback_im[0-15]           1           1      100.00 
+                                 feedback_re[0-15]           1           1      100.00 
+                          g_mult/mult_out_im[0-15]           1           1      100.00 
+                          g_mult/mult_out_re[0-15]           1           1      100.00 
+                                           i[0-31]           0           0        0.00 
+                                       in_im[0-15]           1           1      100.00 
+                                       in_re[0-15]           1           1      100.00 
+                                      out_im[0-15]           1           1      100.00 
+                                      out_re[0-15]           1           1      100.00 
+                                phase_counter[0-2]           1           1      100.00 
+                                             rst_n           0           1       50.00 
+                              scaled_diff_im[0-15]           1           1      100.00 
+                              scaled_diff_re[0-15]           1           1      100.00 
+                               scaled_sum_im[0-15]           1           1      100.00 
+                               scaled_sum_re[0-15]           1           1      100.00 
+                                 twiddle_addr[0-1]           1           1      100.00 
+                                  twiddle_is_neg_j           1           1      100.00 
+                                    twiddle_is_one           1           1      100.00 
+                                         w_im[0-5]           1           1      100.00 
+                                           w_im[6]           0           0        0.00 
+                                           w_im[7]           1           1      100.00 
+                                           w_im[8]           0           0        0.00 
+                                           w_im[9]           1           1      100.00 
+                                       w_im[10-11]           0           0        0.00 
+                                          w_im[12]           1           1      100.00 
+                                          w_im[13]           0           0        0.00 
+                                       w_im[14-15]           1           1      100.00 
+                                        w_re[0-15]           1           1      100.00 
+
+Total Node Count     =        401 
+Toggled Node Count   =        362 
+Untoggled Node Count =         39 
+
+Toggle Coverage      =      90.52% (726 of 802 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_rom2
+=== Design Unit: work.twiddle_rom
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         4         1    80.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /top/dut/u_rom2
+NOTE: The modification timestamp for source file '../../RTL_design/twiddle_rom.v' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/twiddle_rom.v
+------------------------------------CASE Branch------------------------------------
+    59                                       320     Count coming in to CASE
+    60              1                         80     
+    65              1                         80     
+    70              1                         80     
+    75              1                         80     
+    80              1                    ***0***     
+Branch totals: 4 hits of 5 branches = 80.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      13        11         2    84.61%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_rom2 --
+NOTE: The modification timestamp for source file '../../RTL_design/twiddle_rom.v' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/twiddle_rom.v
+    12              1                        320     
+    13              1                        320     
+    14              1                        320     
+    61              1                         80     
+    62              1                         80     
+    66              1                         80     
+    67              1                         80     
+    71              1                         80     
+    72              1                         80     
+    76              1                         80     
+    77              1                         80     
+    81              1                    ***0***     
+    82              1                    ***0***     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         68        58        10    85.29%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_rom2 --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                         addr[0-1]           1           1      100.00 
+                                       w_im[15-14]           1           1      100.00 
+                                          w_im[13]           0           0        0.00 
+                                          w_im[12]           1           1      100.00 
+                                       w_im[11-10]           0           0        0.00 
+                                           w_im[9]           1           1      100.00 
+                                           w_im[8]           0           0        0.00 
+                                           w_im[7]           1           1      100.00 
+                                           w_im[6]           0           0        0.00 
+                                         w_im[5-0]           1           1      100.00 
+                                        w_re[15-0]           1           1      100.00 
+
+Total Node Count     =         34 
+Toggled Node Count   =         29 
+Untoggled Node Count =          5 
+
+Toggle Coverage      =      85.29% (58 of 68 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s3/u_bf
+=== Design Unit: work.butterfly
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         4         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s3/u_bf --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/butterfly.v
+    18              1                        891     
+    19              1                        892     
+    20              1                        891     
+    21              1                        892     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        264       264         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s3/u_bf --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                           delayed_sample_im[0-15]           1           1      100.00 
+                           delayed_sample_re[0-15]           1           1      100.00 
+                             input_sample_im[0-15]           1           1      100.00 
+                             input_sample_re[0-15]           1           1      100.00 
+
+Total Node Count     =        132 
+Toggled Node Count   =        132 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (264 of 264 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s3
+=== Design Unit: work.sdf_stage
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        19        18         1    94.73%
+
+================================Branch Details================================
+
+Branch Coverage for instance /top/dut/u_s3
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+------------------------------------IF Branch------------------------------------
+    111                                     1210     Count coming in to IF
+    111             1                        625     
+    111             2                        585     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    112                                     1210     Count coming in to IF
+    112             1                        625     
+    112             2                        585     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    119                                     1534     Count coming in to IF
+    119             1                        737     
+    119             2                        797     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    120                                     1535     Count coming in to IF
+    120             1                        737     
+    120             2                        798     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    122                                     1202     Count coming in to IF
+    122             1                        583     
+    122             2                        619     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    123                                     1203     Count coming in to IF
+    123             1                        583     
+    123             2                        620     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    130                                      321     Count coming in to IF
+    130             1                          2     
+    138             1                        319     
+                                         ***0***     All False Count
+Branch totals: 2 hits of 3 branches = 66.66%
+
+------------------------------------IF Branch------------------------------------
+    141                                      319     Count coming in to IF
+    141             1                        159     
+    141             2                        160     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    142                                      319     Count coming in to IF
+    142             1                         79     
+    142             2                        240     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       1         1         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /top/dut/u_s3 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Condition View-------------------
+Line       142 Item    1  (phase_counter == ((2 * 2) - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                        Input Term   Covered  Reason for no coverage   Hint
+                       -----------  --------  -----------------------  --------------
+  (phase_counter == ((2 * 2) - 1))         Y
+
+     Rows:       Hits  FEC Target                          Non-masking condition(s)      
+ ---------  ---------  --------------------                -------------------------     
+  Row   1:          1  (phase_counter == ((2 * 2) - 1))_0  -                             
+  Row   2:          1  (phase_counter == ((2 * 2) - 1))_1  -                             
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /top/dut/u_s3 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Expression View-----------------
+Line       53 Item    1  (phase_counter >= 2)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (phase_counter >= 2)         Y
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (phase_counter >= 2)_0  -                             
+  Row   2:          1  (phase_counter >= 2)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      24        24         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s3 --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+    53              1                        321     
+    66              1                        321     
+    67              1                        321     
+    82              1                        890     
+    83              1                        891     
+    84              1                        890     
+    85              1                        891     
+    111             1                       1211     
+    112             1                       1211     
+    119             1                       1535     
+    120             1                       1536     
+    122             1                       1203     
+    123             1                       1204     
+    129             1                        321     
+    131             1                          2     
+    132             1                          2     
+    133             1                          2     
+    133             2                          4     
+    134             1                          4     
+    135             1                          4     
+    139             1                        319     
+    140             1                        319     
+    141             1                        319     
+    142             1                        319     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        732       602       130    82.24%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s3 --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                                   butterfly_phase           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                                               clk           1           1      100.00 
+                                      delay_ptr[0]           1           1      100.00 
+                              delay_write_im[0-15]           1           1      100.00 
+                              delay_write_re[0-15]           1           1      100.00 
+                                  delayed_im[0-15]           1           1      100.00 
+                                  delayed_re[0-15]           1           1      100.00 
+                                                en           0           1       50.00 
+                                 feedback_im[0-15]           1           1      100.00 
+                                 feedback_re[0-15]           1           1      100.00 
+                                           i[0-31]           0           0        0.00 
+                                       in_im[0-15]           1           1      100.00 
+                                       in_re[0-15]           1           1      100.00 
+                                      out_im[0-15]           1           1      100.00 
+                                      out_re[0-15]           1           1      100.00 
+                                phase_counter[0-1]           1           1      100.00 
+                                             rst_n           0           1       50.00 
+                              scaled_diff_im[0-15]           1           1      100.00 
+                              scaled_diff_re[0-15]           1           1      100.00 
+                               scaled_sum_im[0-15]           1           1      100.00 
+                               scaled_sum_re[0-15]           1           1      100.00 
+                                   twiddle_addr[0]           1           1      100.00 
+                                  twiddle_is_neg_j           1           1      100.00 
+                                    twiddle_is_one           1           1      100.00 
+                                        w_im[0-15]           0           0        0.00 
+                                        w_re[0-15]           0           0        0.00 
+
+Total Node Count     =        366 
+Toggled Node Count   =        300 
+Untoggled Node Count =         66 
+
+Toggle Coverage      =      82.24% (602 of 732 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s4/u_bf
+=== Design Unit: work.butterfly
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         4         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s4/u_bf --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/butterfly.v
+    18              1                        962     
+    19              1                        961     
+    20              1                        962     
+    21              1                        961     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        264       264         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s4/u_bf --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                           delayed_sample_im[0-15]           1           1      100.00 
+                           delayed_sample_re[0-15]           1           1      100.00 
+                             input_sample_im[0-15]           1           1      100.00 
+                             input_sample_re[0-15]           1           1      100.00 
+
+Total Node Count     =        132 
+Toggled Node Count   =        132 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (264 of 264 bins)
+
+=================================================================================
+=== Instance: /top/dut/u_s4
+=== Design Unit: work.sdf_stage
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        19        15         4    78.94%
+
+================================Branch Details================================
+
+Branch Coverage for instance /top/dut/u_s4
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+------------------------------------IF Branch------------------------------------
+    111                                      962     Count coming in to IF
+    111             1                        962     
+    111             2                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    112                                      962     Count coming in to IF
+    112             1                        962     
+    112             2                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    119                                     1625     Count coming in to IF
+    119             1                        755     
+    119             2                        870     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    120                                     1628     Count coming in to IF
+    120             1                        755     
+    120             2                        873     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    122                                     1279     Count coming in to IF
+    122             1                        602     
+    122             2                        677     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    123                                     1278     Count coming in to IF
+    123             1                        601     
+    123             2                        677     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    130                                      321     Count coming in to IF
+    130             1                          2     
+    138             1                        319     
+                                         ***0***     All False Count
+Branch totals: 2 hits of 3 branches = 66.66%
+
+------------------------------------IF Branch------------------------------------
+    141                                      319     Count coming in to IF
+    141             1                        319     
+    141             2                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    142                                      319     Count coming in to IF
+    142             1                        159     
+    142             2                        160     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       1         1         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /top/dut/u_s4 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Condition View-------------------
+Line       142 Item    1  (phase_counter == ((2 * 1) - 1))
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                        Input Term   Covered  Reason for no coverage   Hint
+                       -----------  --------  -----------------------  --------------
+  (phase_counter == ((2 * 1) - 1))         Y
+
+     Rows:       Hits  FEC Target                          Non-masking condition(s)      
+ ---------  ---------  --------------------                -------------------------     
+  Row   1:          1  (phase_counter == ((2 * 1) - 1))_0  -                             
+  Row   2:          1  (phase_counter == ((2 * 1) - 1))_1  -                             
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      1         1         0   100.00%
+
+================================Expression Details================================
+
+Expression Coverage for instance /top/dut/u_s4 --
+
+  File ../../RTL_design/sdf_stage.v
+----------------Focused Expression View-----------------
+Line       53 Item    1  (phase_counter >= 1)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (phase_counter >= 1)         Y
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (phase_counter >= 1)_0  -                             
+  Row   2:          1  (phase_counter >= 1)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      24        24         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top/dut/u_s4 --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../../RTL_design/sdf_stage.v
+    53              1                        321     
+    66              1                        307     
+    67              1                        305     
+    82              1                        961     
+    83              1                        960     
+    84              1                        961     
+    85              1                        960     
+    111             1                        963     
+    112             1                        963     
+    119             1                       1626     
+    120             1                       1629     
+    122             1                       1280     
+    123             1                       1279     
+    129             1                        321     
+    131             1                          2     
+    132             1                          2     
+    133             1                          2     
+    133             2                          2     
+    134             1                          2     
+    135             1                          2     
+    139             1                        319     
+    140             1                        319     
+    141             1                        319     
+    142             1                        319     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        732       592       140    80.87%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut/u_s4 --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                           butterfly_diff_im[0-16]           1           1      100.00 
+                           butterfly_diff_re[0-16]           1           1      100.00 
+                                   butterfly_phase           1           1      100.00 
+                            butterfly_sum_im[0-16]           1           1      100.00 
+                            butterfly_sum_re[0-16]           1           1      100.00 
+                                               clk           1           1      100.00 
+                                      delay_ptr[0]           0           0        0.00 
+                              delay_write_im[0-15]           1           1      100.00 
+                              delay_write_re[0-15]           1           1      100.00 
+                                  delayed_im[0-15]           1           1      100.00 
+                                  delayed_re[0-15]           1           1      100.00 
+                                                en           0           1       50.00 
+                                 feedback_im[0-15]           1           1      100.00 
+                                 feedback_re[0-15]           1           1      100.00 
+                                           i[0-31]           0           0        0.00 
+                                       in_im[0-15]           1           1      100.00 
+                                       in_re[0-15]           1           1      100.00 
+                                      out_im[0-15]           1           1      100.00 
+                                      out_re[0-15]           1           1      100.00 
+                                  phase_counter[0]           1           1      100.00 
+                                  phase_counter[1]           0           0        0.00 
+                                             rst_n           0           1       50.00 
+                              scaled_diff_im[0-15]           1           1      100.00 
+                              scaled_diff_re[0-15]           1           1      100.00 
+                               scaled_sum_im[0-15]           1           1      100.00 
+                               scaled_sum_re[0-15]           1           1      100.00 
+                                   twiddle_addr[0]           0           0        0.00 
+                                  twiddle_is_neg_j           0           0        0.00 
+                                    twiddle_is_one           0           0        0.00 
+                                        w_im[0-15]           0           0        0.00 
+                                        w_re[0-15]           0           0        0.00 
+
+Total Node Count     =        366 
+Toggled Node Count   =        295 
+Untoggled Node Count =         71 
+
+Toggle Coverage      =      80.87% (592 of 732 bins)
+
+=================================================================================
+=== Instance: /top/dut
+=== Design Unit: work.fft_wrapper
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        464       450        14    96.98%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                               clk           1           1      100.00 
+                                                en           0           1       50.00 
+                                       in_im[0-15]           1           1      100.00 
+                                       in_re[0-15]           1           1      100.00 
+                                      out_im[0-15]           1           1      100.00 
+                                      out_re[0-15]           1           1      100.00 
+                                             rst_n           0           1       50.00 
+                                   s1_out_im[0-15]           1           1      100.00 
+                                   s1_out_re[0-15]           1           1      100.00 
+                              s1_twiddle_addr[0-2]           1           1      100.00 
+                                   s2_out_im[0-15]           1           1      100.00 
+                                   s2_out_re[0-15]           1           1      100.00 
+                              s2_twiddle_addr[0-1]           1           1      100.00 
+                                   s3_out_im[0-15]           1           1      100.00 
+                                   s3_out_re[0-15]           1           1      100.00 
+                                       w1_im[0-10]           1           1      100.00 
+                                         w1_im[11]           0           0        0.00 
+                                      w1_im[12-15]           1           1      100.00 
+                                       w1_re[0-15]           1           1      100.00 
+                                        w2_im[0-5]           1           1      100.00 
+                                          w2_im[6]           0           0        0.00 
+                                          w2_im[7]           1           1      100.00 
+                                          w2_im[8]           0           0        0.00 
+                                          w2_im[9]           1           1      100.00 
+                                      w2_im[10-11]           0           0        0.00 
+                                         w2_im[12]           1           1      100.00 
+                                         w2_im[13]           0           0        0.00 
+                                      w2_im[14-15]           1           1      100.00 
+                                       w2_re[0-15]           1           1      100.00 
+
+Total Node Count     =        232 
+Toggled Node Count   =        224 
+Untoggled Node Count =          8 
+
+Toggle Coverage      =      96.98% (450 of 464 bins)
+
+=================================================================================
+=== Instance: /top/dut_sva
+=== Design Unit: work.sva
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         3         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/top/dut_sva/a_rst_out_zero
+                     sva.sv(38)                         0          1
+/top/dut_sva/a_out_known
+                     sva.sv(45)                         0          1
+/top/dut_sva/a_in_known
+                     sva.sv(53)                         0          1
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        134       132         2    98.50%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top/dut_sva --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                               clk           1           1      100.00 
+                                                en           0           1       50.00 
+                                       in_im[0-15]           1           1      100.00 
+                                       in_re[0-15]           1           1      100.00 
+                                      out_im[0-15]           1           1      100.00 
+                                      out_re[0-15]           1           1      100.00 
+                                             rst_n           0           1       50.00 
+
+Total Node Count     =         67 
+Toggled Node Count   =         65 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      98.50% (132 of 134 bins)
+
+=================================================================================
+=== Instance: /top
+=== Design Unit: work.top
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       5         5         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /top --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_top.sv
+    9               1                          1     
+    10              1                        641     
+    11              1                        640     
+    41              1                          1     
+    42              1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                          2         2         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /top --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                               clk           1           1      100.00 
+
+Total Node Count     =          1 
+Toggled Node Count   =          1 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (2 of 2 bins)
+
+=================================================================================
+=== Instance: /fft_wrapper_sequence_item
+=== Design Unit: work.fft_wrapper_sequence_item
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10         2         8    20.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_sequence_item
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_seq_item.sv
+------------------------------------IF Branch------------------------------------
+    23                                   ***0***     Count coming in to IF
+    23              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    23                                       320     Count coming in to IF
+    23              2                    ***0***     
+                                             320     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    23                                   ***0***     Count coming in to IF
+    23              3                    ***0***     
+    23              4                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    23                                       320     Count coming in to IF
+    23              5                    ***0***     
+                                             320     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    23                                   ***0***     Count coming in to IF
+    23              6                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fft_wrapper_sequence_item --
+
+  File fft_wrapper_seq_item.sv
+----------------Focused Condition View-------------------
+Line       23 Item    1  (name != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  (name != 0)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (name != 0)_0         -                             
+  Row   2:    ***0***  (name != 0)_1         -                             
+
+----------------Focused Condition View-------------------
+Line       23 Item    2  (tmp_data__ != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (tmp_data__ != null)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (tmp_data__ != null)_0  -                             
+  Row   2:    ***0***  (tmp_data__ != null)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11         3         8    27.27%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_sequence_item --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_seq_item.sv
+    23              1                    ***0***     
+    23              2                    ***0***     
+    23              3                    ***0***     
+    23              4                    ***0***     
+    23              5                    ***0***     
+    23              6                        320     
+    23              7                    ***0***     
+    23              8                    ***0***     
+    23              9                        320     
+    23             10                    ***0***     
+    26              1                        624     
+
+=================================================================================
+=== Instance: /fft_sequences_pkg
+=== Design Unit: work.fft_sequences_pkg
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        28         9        19    32.14%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_sequences_pkg
+NOTE: The modification timestamp for source file 'fft_matlab_seq.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_matlab_seq.sv
+------------------------------------IF Branch------------------------------------
+    9                                    ***0***     Count coming in to IF
+    9               1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    9                                          1     Count coming in to IF
+    9               2                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    9                                    ***0***     Count coming in to IF
+    9               3                    ***0***     
+    9               4                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    9                                          1     Count coming in to IF
+    9               5                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    9                                    ***0***     Count coming in to IF
+    9               6                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    32                                         1     Count coming in to IF
+    32              1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    33                                   ***0***     Count coming in to IF
+    33              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    38                                         1     Count coming in to IF
+    38              1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    39                                   ***0***     Count coming in to IF
+    39              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    44                                         1     Count coming in to IF
+    44              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    48                                         1     Count coming in to IF
+    48              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    57                                       320     Count coming in to IF
+    57              1                    ***0***     
+                                             320     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    72                                       320     Count coming in to IF
+    72              1                    ***0***     
+                                             320     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    82                                         1     Count coming in to IF
+    82              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       6         0         6     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fft_sequences_pkg --
+NOTE: The modification timestamp for source file 'fft_matlab_seq.sv' has been altered since compilation.
+
+  File fft_matlab_seq.sv
+----------------Focused Condition View-------------------
+Line       9 Item    1  (name != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  (name != 0)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (name != 0)_0         -                             
+  Row   2:    ***0***  (name != 0)_1         -                             
+
+----------------Focused Condition View-------------------
+Line       9 Item    2  (tmp_data__ != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (tmp_data__ != null)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:          1  (tmp_data__ != null)_0  -                             
+  Row   2:    ***0***  (tmp_data__ != null)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       32 Item    1  (fd_re == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (fd_re == 0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (fd_re == 0)_0        -                             
+  Row   2:    ***0***  (fd_re == 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       38 Item    1  (fd_im == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (fd_im == 0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (fd_im == 0)_0        -                             
+  Row   2:    ***0***  (fd_im == 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       57 Item    1  ((status_re != 1) || (status_im != 1))
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+        Input Term   Covered  Reason for no coverage   Hint
+       -----------  --------  -----------------------  --------------
+  (status_re != 1)         N  '_1' not hit             Hit '_1'
+  (status_im != 1)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (status_re != 1)_0    ~(status_im != 1)             
+  Row   2:    ***0***  (status_re != 1)_1    -                             
+  Row   3:          1  (status_im != 1)_0    ~(status_re != 1)             
+  Row   4:    ***0***  (status_im != 1)_1    ~(status_re != 1)             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      34        22        12    64.70%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_sequences_pkg --
+NOTE: The modification timestamp for source file 'fft_matlab_seq.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_matlab_seq.sv
+    9               1                    ***0***     
+    9               2                    ***0***     
+    9               3                    ***0***     
+    9               4                    ***0***     
+    9               5                    ***0***     
+    9               6                          1     
+    9               7                    ***0***     
+    9               8                    ***0***     
+    9               9                          1     
+    9              10                    ***0***     
+    11              1                          1     
+    12              1                          1     
+    14              1                          1     
+    29              1                          1     
+    30              1                          1     
+    33              1                    ***0***     
+    39              1                    ***0***     
+    44              1                          1     
+    48              1                          1     
+    52              1                        321     
+    54              1                        320     
+    55              1                        320     
+    58              1                    ***0***     
+    60              1                        320     
+    62              1                        320     
+    64              1                        320     
+    65              1                        320     
+    67              1                        320     
+    68              1                        320     
+    70              1                        320     
+    72              1                    ***0***     
+    79              1                          1     
+    80              1                          1     
+    82              1                          1     
+
+=================================================================================
+=== Instance: /fft_wrapper_scoreborad_pck
+=== Design Unit: work.fft_wrapper_scoreborad_pck
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        51        29        22    56.86%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_scoreborad_pck
+NOTE: The modification timestamp for source file 'fft_wrapper_scoreboard.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_scoreboard.sv
+------------------------------------IF Branch------------------------------------
+    49                                         1     Count coming in to IF
+    49              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    53                                         1     Count coming in to IF
+    53              1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    54                                   ***0***     Count coming in to IF
+    54              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------CASE Branch------------------------------------
+    87                                         5     Count coming in to CASE
+    92              1                          1     
+    219             1                          1     
+    219             1                          1     
+    219             1                          1     
+    219             1                          1     
+Branch totals: 5 hits of 5 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    101                                        1     Count coming in to IF
+    101             1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    119                                        1     Count coming in to IF
+    119             1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    120                                  ***0***     Count coming in to IF
+    120             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    124                                        1     Count coming in to IF
+    124             1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    135                                      304     Count coming in to IF
+    135             1                        304     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    146                                      304     Count coming in to IF
+    146             1                    ***0***     
+                                             304     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    147                                  ***0***     Count coming in to IF
+    147             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    161                                      304     Count coming in to IF
+    161             1                         28     
+    161             2                        276     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    162                                      304     Count coming in to IF
+    162             1                         41     
+    162             2                        263     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    164                                      304     Count coming in to IF
+    164             1                          2     
+                                             302     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    165                                      304     Count coming in to IF
+    165             1                          2     
+                                             302     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    170                                      304     Count coming in to IF
+    170             1                        133     
+    182             1                        171     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    172                                      133     Count coming in to IF
+    172             1                        133     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    183                                      171     Count coming in to IF
+    183             1                    ***0***     
+                                             171     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    201                                        1     Count coming in to IF
+    201             1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    202                                        1     Count coming in to IF
+    202             1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    206                                        1     Count coming in to IF
+    206             1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    210                                        1     Count coming in to IF
+    210             1                    ***0***     
+    212             1                          1     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    211                                  ***0***     Count coming in to IF
+    211             1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    213                                        1     Count coming in to IF
+    213             1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      11         7         4    63.63%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fft_wrapper_scoreborad_pck --
+NOTE: The modification timestamp for source file 'fft_wrapper_scoreboard.sv' has been altered since compilation.
+
+  File fft_wrapper_scoreboard.sv
+----------------Focused Condition View-------------------
+Line       86 Item    1  ($fscanf(fd,'h2573202564,key,val) == 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                               Input Term   Covered  Reason for no coverage   Hint
+                              -----------  --------  -----------------------  --------------
+  ($fscanf(fd,'h2573202564,key,val) == 2)         Y
+
+     Rows:       Hits  FEC Target                                 Non-masking condition(s)      
+ ---------  ---------  --------------------                       -------------------------     
+  Row   1:          1  ($fscanf(fd,'h2573202564,key,val) == 2)_0  -                             
+  Row   2:          1  ($fscanf(fd,'h2573202564,key,val) == 2)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       146 Item    1  (this.idx >= this.n_expected)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                     Input Term   Covered  Reason for no coverage   Hint
+                    -----------  --------  -----------------------  --------------
+  (this.idx >= this.n_expected)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                       Non-masking condition(s)      
+ ---------  ---------  --------------------             -------------------------     
+  Row   1:          1  (this.idx >= this.n_expected)_0  -                             
+  Row   2:    ***0***  (this.idx >= this.n_expected)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       161 Item    1  (got_re > ref_re)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (got_re > ref_re)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (got_re > ref_re)_0   -                             
+  Row   2:          1  (got_re > ref_re)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       162 Item    1  (got_im > ref_im)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+         Input Term   Covered  Reason for no coverage   Hint
+        -----------  --------  -----------------------  --------------
+  (got_im > ref_im)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (got_im > ref_im)_0   -                             
+  Row   2:          1  (got_im > ref_im)_1   -                             
+
+----------------Focused Condition View-------------------
+Line       164 Item    1  (d_re > this.worst_re)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+  (d_re > this.worst_re)         Y
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:          1  (d_re > this.worst_re)_0  -                             
+  Row   2:          1  (d_re > this.worst_re)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       165 Item    1  (d_im > this.worst_im)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+  (d_im > this.worst_im)         Y
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:          1  (d_im > this.worst_im)_0  -                             
+  Row   2:          1  (d_im > this.worst_im)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       170 Item    1  ((d_re > this.tol_lsb) || (d_im > this.tol_lsb))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+             Input Term   Covered  Reason for no coverage   Hint
+            -----------  --------  -----------------------  --------------
+  (d_re > this.tol_lsb)         Y
+  (d_im > this.tol_lsb)         Y
+
+     Rows:       Hits  FEC Target               Non-masking condition(s)      
+ ---------  ---------  --------------------     -------------------------     
+  Row   1:          1  (d_re > this.tol_lsb)_0  ~(d_im > this.tol_lsb)        
+  Row   2:          1  (d_re > this.tol_lsb)_1  -                             
+  Row   3:          1  (d_im > this.tol_lsb)_0  ~(d_re > this.tol_lsb)        
+  Row   4:          1  (d_im > this.tol_lsb)_1  ~(d_re > this.tol_lsb)        
+
+----------------Focused Condition View-------------------
+Line       201 Item    1  (this.n_compared != this.n_expected)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                            Input Term   Covered  Reason for no coverage   Hint
+                           -----------  --------  -----------------------  --------------
+  (this.n_compared != this.n_expected)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                              Non-masking condition(s)      
+ ---------  ---------  --------------------                    -------------------------     
+  Row   1:    ***0***  (this.n_compared != this.n_expected)_0  -                             
+  Row   2:          1  (this.n_compared != this.n_expected)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       210 Item    1  ((this.n_mismatch == 0) && (this.n_compared == this.n_expected))
+Condition totals: 0 of 2 input terms covered = 0.00%
+
+                            Input Term   Covered  Reason for no coverage   Hint
+                           -----------  --------  -----------------------  --------------
+                (this.n_mismatch == 0)         N  '_1' not hit             Hit '_1'
+  (this.n_compared == this.n_expected)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target                              Non-masking condition(s)      
+ ---------  ---------  --------------------                    -------------------------     
+  Row   1:          1  (this.n_mismatch == 0)_0                -                             
+  Row   2:    ***0***  (this.n_mismatch == 0)_1                (this.n_compared == this.n_expected)
+  Row   3:    ***0***  (this.n_compared == this.n_expected)_0  (this.n_mismatch == 0)        
+  Row   4:    ***0***  (this.n_compared == this.n_expected)_1  (this.n_mismatch == 0)        
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      73        65         8    89.04%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_scoreborad_pck --
+NOTE: The modification timestamp for source file 'fft_wrapper_scoreboard.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_scoreboard.sv
+    12              1                    ***0***     
+    12              2                    ***0***     
+    12              3                        451     
+    23              1                          1     
+    24              1                          1     
+    25              1                          1     
+    26              1                          1     
+    27              1                          1     
+    28              1                          1     
+    32              1                          1     
+    35              1                          1     
+    36              1                          1     
+    37              1                          1     
+    38              1                          1     
+    39              1                          1     
+    43              1                          1     
+    48              1                          1     
+    49              1                          1     
+    51              1                          1     
+    52              1                          1     
+    54              1                    ***0***     
+    57              1                          1     
+    58              1                          1     
+    59              1                          1     
+    61              1                          1     
+    62              1                          1     
+    67              1                          1     
+    68              1                          1     
+    81              1                          1     
+    82              1                          1     
+    86              1                          6     
+    88              1                          1     
+    89              1                          1     
+    90              1                          1     
+    91              1                          1     
+    95              1                          1     
+    97              1                          1     
+    101             1                          1     
+    110             1                       3502     
+    111             1                       3501     
+    112             1                       3501     
+    116             1                          1     
+    117             1                          1     
+    120             1                    ***0***     
+    124             1                          1     
+    131             1                          1     
+    132             1                         15     
+    132             2                         15     
+    133             1                          1     
+    134             1                        305     
+    136             1                        304     
+    147             1                    ***0***     
+    150             1                    ***0***     
+    154             1                        304     
+    155             1                        304     
+    158             1                        304     
+    159             1                        304     
+    161             1                        304     
+    162             1                        304     
+    164             1                          2     
+    165             1                          2     
+    167             1                        304     
+    168             1                        304     
+    171             1                        133     
+    172             1                        133     
+    183             1                    ***0***     
+    193             1                        304     
+    194             1                        304     
+    199             1                          1     
+    202             1                          1     
+    206             1                          1     
+    211             1                    ***0***     
+    213             1                          1     
+
+=================================================================================
+=== Instance: /fft_wrapper_configuration
+=== Design Unit: work.fft_wrapper_configuration
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10         0        10     0.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_configuration
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_confg.sv
+------------------------------------IF Branch------------------------------------
+    5                                    ***0***     Count coming in to IF
+    5               1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    5                                    ***0***     Count coming in to IF
+    5               2                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    5                                    ***0***     Count coming in to IF
+    5               3                    ***0***     
+    5               4                    ***0***     
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    5                                    ***0***     Count coming in to IF
+    5               5                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    5                                    ***0***     Count coming in to IF
+    5               6                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fft_wrapper_configuration --
+
+  File fft_wrapper_confg.sv
+----------------Focused Condition View-------------------
+Line       5 Item    1  (name != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  (name != 0)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (name != 0)_0         -                             
+  Row   2:    ***0***  (name != 0)_1         -                             
+
+----------------Focused Condition View-------------------
+Line       5 Item    2  (tmp_data__ != null)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+            Input Term   Covered  Reason for no coverage   Hint
+           -----------  --------  -----------------------  --------------
+  (tmp_data__ != null)         N  No hits                  Hit '_0' and '_1'
+
+     Rows:       Hits  FEC Target              Non-masking condition(s)      
+ ---------  ---------  --------------------    -------------------------     
+  Row   1:    ***0***  (tmp_data__ != null)_0  -                             
+  Row   2:    ***0***  (tmp_data__ != null)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      11         1        10     9.09%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_configuration --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_confg.sv
+    5               1                    ***0***     
+    5               2                    ***0***     
+    5               3                    ***0***     
+    5               4                    ***0***     
+    5               5                    ***0***     
+    5               6                    ***0***     
+    5               7                    ***0***     
+    5               8                    ***0***     
+    5               9                    ***0***     
+    5              10                    ***0***     
+    11              1                          1     
+
+=================================================================================
+=== Instance: /fft_wrapper_monitor
+=== Design Unit: work.fft_wrapper_monitor
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10         5         5    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_monitor
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_monitor.sv
+------------------------------------IF Branch------------------------------------
+    36                                         1     Count coming in to IF
+    36              1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    43                                   ***0***     Count coming in to IF
+    43              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    60                                        17     Count coming in to IF
+    60              1                         17     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    73                                        17     Count coming in to IF
+    73              1                         16     
+                                               1     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    91                                       304     Count coming in to IF
+    91              1                    ***0***     
+                                             304     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /fft_wrapper_monitor --
+
+  File fft_wrapper_monitor.sv
+----------------Focused Condition View-------------------
+Line       58 Item    1  (this.latency_cycles <= 15)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                   Input Term   Covered  Reason for no coverage   Hint
+                  -----------  --------  -----------------------  --------------
+  (this.latency_cycles <= 15)         Y
+
+     Rows:       Hits  FEC Target                     Non-masking condition(s)      
+ ---------  ---------  --------------------           -------------------------     
+  Row   1:          1  (this.latency_cycles <= 15)_0  -                             
+  Row   2:          1  (this.latency_cycles <= 15)_1  -                             
+
+----------------Focused Condition View-------------------
+Line       73 Item    1  (this.fft_wrapper_test_vif.mon_cb.rst_n !== 1'bX)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+                                         Input Term   Covered  Reason for no coverage   Hint
+                                        -----------  --------  -----------------------  --------------
+  (this.fft_wrapper_test_vif.mon_cb.rst_n !== 1'bX)         Y
+
+     Rows:       Hits  FEC Target                                           Non-masking condition(s)      
+ ---------  ---------  --------------------                                 -------------------------     
+  Row   1:          1  (this.fft_wrapper_test_vif.mon_cb.rst_n !== 1'bX)_0  -                             
+  Row   2:          1  (this.fft_wrapper_test_vif.mon_cb.rst_n !== 1'bX)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      26        22         4    84.61%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_monitor --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_monitor.sv
+    13              1                    ***0***     
+    13              2                    ***0***     
+    13              3                         36     
+    16              1                          1     
+    27              1                          1     
+    32              1                          1     
+    34              1                          1     
+    43              1                    ***0***     
+    49              1                          1     
+    55              1                          1     
+    56              1                          1     
+    58              1                         18     
+    60              1                         17     
+    71              1                         17     
+    74              1                         16     
+    76              1                          1     
+    78              1                        305     
+    80              1                        304     
+    82              1                        304     
+    83              1                        304     
+    85              1                        304     
+    86              1                        304     
+    88              1                        304     
+    89              1                        304     
+    91              1                    ***0***     
+    96              1                        304     
+
+=================================================================================
+=== Instance: /fft_wrapper_sequencer
+=== Design Unit: work.fft_wrapper_sequencer
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         2         2    50.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_sequencer --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_sequencer.sv
+    7               1                    ***0***     
+    7               2                    ***0***     
+    7               3                          2     
+    10              1                          1     
+
+=================================================================================
+=== Instance: /fft_wrapper_drive
+=== Design Unit: work.fft_wrapper_drive
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         1         1    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_drive
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_driver.sv
+------------------------------------IF Branch------------------------------------
+    29                                         1     Count coming in to IF
+    29              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      19        17         2    89.47%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_drive --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_driver.sv
+    18              1                    ***0***     
+    18              2                    ***0***     
+    18              3                          4     
+    24              1                          1     
+    28              1                          1     
+    29              1                          1     
+    33              1                          1     
+    37              1                          1     
+    38              1                          1     
+    39              1                          1     
+    40              1                          1     
+    42              1                          1     
+    43              1                        321     
+    45              1                        320     
+    46              1                        320     
+    47              1                        320     
+    48              1                        320     
+    49              1                        320     
+    51              1                        320     
+
+=================================================================================
+=== Instance: /fft_wrapper_agtt
+=== Design Unit: work.fft_wrapper_agtt
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10         4         6    40.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_agtt
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_agt.sv
+------------------------------------IF Branch------------------------------------
+    24                                         1     Count coming in to IF
+    24              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    28                                         1     Count coming in to IF
+    28              1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    29                                   ***0***     Count coming in to IF
+    29              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                         1     Count coming in to IF
+    31              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    44                                         1     Count coming in to IF
+    44              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      16        13         3    81.25%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_agtt --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_agt.sv
+    11              1                    ***0***     
+    11              2                    ***0***     
+    11              3                          4     
+    20              1                          1     
+    23              1                          1     
+    24              1                          1     
+    26              1                          1     
+    29              1                    ***0***     
+    33              1                          1     
+    34              1                          1     
+    37              1                          1     
+    41              1                          1     
+    43              1                          1     
+    46              1                          1     
+    47              1                          1     
+    49              1                          1     
+
+=================================================================================
+=== Instance: /fft_wrapper_env_pac
+=== Design Unit: work.fft_wrapper_env_pac
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         1         1    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_env_pac
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_env.sv
+------------------------------------IF Branch------------------------------------
+    19                                         1     Count coming in to IF
+    19              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      10         8         2    80.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_env_pac --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_env.sv
+    9               1                    ***0***     
+    9               2                    ***0***     
+    9               3                          4     
+    14              1                          1     
+    18              1                          1     
+    19              1                          1     
+    20              1                          1     
+    21              1                          1     
+    25              1                          1     
+    26              1                          1     
+
+=================================================================================
+=== Instance: /fft_wrapper_test_pkg
+=== Design Unit: work.fft_wrapper_test_pkg
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         2         4    33.33%
+
+================================Branch Details================================
+
+Branch Coverage for instance /fft_wrapper_test_pkg
+NOTE: The modification timestamp for source file 'fft_wrapper_test.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_test.sv
+------------------------------------IF Branch------------------------------------
+    22                                         1     Count coming in to IF
+    22              1                          1     
+                                         ***0***     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    30                                         1     Count coming in to IF
+    30              1                    ***0***     
+                                               1     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                   ***0***     Count coming in to IF
+    31              1                    ***0***     
+                                         ***0***     All False Count
+Branch totals: 0 hits of 2 branches = 0.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      16        13         3    81.25%
+
+================================Statement Details================================
+
+Statement Coverage for instance /fft_wrapper_test_pkg --
+NOTE: The modification timestamp for source file 'fft_wrapper_test.sv' has been altered since compilation.
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File fft_wrapper_test.sv
+    11              1                    ***0***     
+    11              2                    ***0***     
+    11              3                          6     
+    17              1                          1     
+    21              1                          1     
+    22              1                          1     
+    23              1                          1     
+    24              1                          1     
+    26              1                          1     
+    31              1                    ***0***     
+    33              1                          1     
+    34              1                          1     
+    38              1                          1     
+    39              1                          1     
+    41              1                          1     
+    44              1                          1     
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/top/dut_sva/a_rst_out_zero
+                     sva.sv(38)                         0          1
+/top/dut_sva/a_out_known
+                     sva.sv(45)                         0          1
+/top/dut_sva/a_in_known
+                     sva.sv(53)                         0          1
+
+Total Coverage By Instance (filtered view): 81.48%
+
