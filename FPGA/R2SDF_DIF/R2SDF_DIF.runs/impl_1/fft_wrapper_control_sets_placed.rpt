@@ -1,0 +1,85 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Aug 15 09:23:46 2026
+| Host         : Martin running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file fft_wrapper_control_sets_placed.rpt
+| Design       : fft_wrapper
+| Device       : xc7z020
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    19 |
+| Unused register locations in slices containing registers |    24 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      4 |            2 |
+|    16+ |           15 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             752 |          133 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------+--------------------------------+------------------+----------------+
+|  Clock Signal  |             Enable Signal            |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++----------------+--------------------------------------+--------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | u_s1/delay_line_im[7][11]_i_1_n_0    | u_s3/delay_line_re_reg[1][0]_0 |                1 |              2 |
+|  clk_IBUF_BUFG | en_IBUF                              | u_s1/delay_ptr[2]_i_2_n_0      |                1 |              2 |
+|  clk_IBUF_BUFG | en_IBUF                              | u_s1/delay_ptr[1]_i_2__0_n_0   |                1 |              4 |
+|  clk_IBUF_BUFG | en_IBUF                              | u_s2/delay_ptr[1]_i_2_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[7][11]_i_1_n_0    | u_s1/delay_ptr[1]_i_2__0_n_0   |                7 |             46 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[4][11]_i_1_n_0    | u_s1/delay_ptr[2]_i_2_n_0      |                7 |             48 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[6][11]_i_1_n_0    | u_s1/delay_ptr[2]_i_2_n_0      |                7 |             48 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[0][11]_i_1_n_0    | u_s1/delay_ptr[2]_i_2_n_0      |                8 |             48 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[2][11]_i_1_n_0    | u_s1/delay_ptr[2]_i_2_n_0      |                6 |             48 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[1][11]_i_1_n_0    | u_s1/delay_ptr[1]_i_2__0_n_0   |                7 |             48 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[3][11]_i_1_n_0    | u_s1/delay_ptr[1]_i_2__0_n_0   |                7 |             48 |
+|  clk_IBUF_BUFG | u_s1/delay_line_im[5][11]_i_1_n_0    | u_s1/delay_ptr[1]_i_2__0_n_0   |                9 |             48 |
+|  clk_IBUF_BUFG | u_s2/delay_line_im[2][11]_i_1__0_n_0 | u_s2/delay_ptr[1]_i_2_n_0      |               11 |             48 |
+|  clk_IBUF_BUFG | u_s2/delay_line_im[3][11]_i_1__0_n_0 | u_s2/delay_ptr[1]_i_2_n_0      |                8 |             48 |
+|  clk_IBUF_BUFG | u_s2/delay_line_im[1][11]_i_1__0_n_0 | u_s2/delay_ptr[1]_i_2_n_0      |               10 |             48 |
+|  clk_IBUF_BUFG | u_s2/delay_line_re                   | u_s2/delay_ptr[1]_i_2_n_0      |                9 |             48 |
+|  clk_IBUF_BUFG | u_s3/delay_line_re                   | u_s3/delay_line_re_reg[1][0]_0 |                9 |             48 |
+|  clk_IBUF_BUFG | u_s3/delay_line_im[1][11]_i_1__1_n_0 | u_s3/delay_line_re_reg[1][0]_0 |                7 |             48 |
+|  clk_IBUF_BUFG | en_IBUF                              | u_s3/delay_line_re_reg[1][0]_0 |               17 |             70 |
++----------------+--------------------------------------+--------------------------------+------------------+----------------+
+
+
