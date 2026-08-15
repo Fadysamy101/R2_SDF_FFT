@@ -1,0 +1,532 @@
+
+Magic 8.3 revision 413 - Compiled on Wed Jul 12 10:04:40 UTC 2023.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Using technology "sky130A", version 1.0.493-0-g0fe599b
+Reading LEF data from file /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef.
+This action cannot be undone.
+LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 116 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 125 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 126 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 127 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 160 (Message): Unknown keyword "MINENCLOSEDAREA" in LEF file; ignoring.
+LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 171 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 172 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 173 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 213 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 214 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 215 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read, Line 255 (Message): Unknown keyword "MAXIMUMDENSITY" in LEF file; ignoring.
+LEF read, Line 256 (Message): Unknown keyword "DENSITYCHECKWINDOW" in LEF file; ignoring.
+LEF read, Line 257 (Message): Unknown keyword "DENSITYCHECKSTEP" in LEF file; ignoring.
+LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+LEF read: Processed 801 lines.
+Reading DEF data from file /openlane/designs/FFT/runs/full_flow_4/results/routing/fft_wrapper.def.
+This action cannot be undone.
+  Processed 4 vias total.
+Cell sky130_fd_sc_hd__diode_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_3 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_ef_sc_hd__decap_12 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_8 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__decap_6 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__fill_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__tapvpwrvgnd_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__inv_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a221o_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_6 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3b_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a221o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211o_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2111o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22oi_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22oi_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2111oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31o_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux4_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2bb2o_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o2bb2a_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22a_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a221o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21bo_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22o_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o2bb2a_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xnor2_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__xor2_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2bb2o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a221oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlymetal6s2s_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a41oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31oi_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a22oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22a_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o32a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o32ai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ba_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31a_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a31o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22ai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2b_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__mux2_8 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2b_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o32a_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21o_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand2_8 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkinv_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21a_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4bb_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a2bb2o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o31ai_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21boi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211a_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o2111a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and3_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor3_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2_8 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor4_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a211oi_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor4_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211ai_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand4_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o2bb2a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o221a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o311a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_8 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21ba_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21a_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o41a_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or2b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a21bo_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and2b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o41a_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or3b_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o41a_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nand3b_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22ai_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4bb_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a41oi_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32o_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o32a_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor4_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o221ai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_8 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__nor2b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o21bai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a41o_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__or4b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o311ai_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a32oi_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o211a_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__o22ai_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__a311o_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__and4b_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dfrtp_4 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkbuf_16 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__buf_12 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlygate4sd1_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkdlybuf4s25_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__clkdlybuf4s15_2 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlygate4sd2_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlygate4sd3_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+Cell sky130_fd_sc_hd__dlymetal6s4s_1 read from path /home/menna/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/mag
+  Processed 68983 subcell instances total.
+  Processed 69 pins total.
+  Processed 2 special nets total.
+  Processed 15301 nets total.
+DEF read: Processed 316762 lines.
+Moving label "_00464_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_00509_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_00510_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_00571_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_00643_" from metal1 to viali in cell fft_wrapper.
+Moving label "_00648_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_00702_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_00775_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_00805_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_00922_" from metal1 to viali in cell fft_wrapper.
+Moving label "_00929_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_00971_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_00975_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_00996_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01095_" from metal4 to via4 in cell fft_wrapper.
+Moving label "_01126_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01183_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_01186_" from metal1 to viali in cell fft_wrapper.
+Moving label "_01208_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_01214_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_01325_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01350_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_01535_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01562_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_01643_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01654_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01672_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_01810_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01875_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_01888_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_02006_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_02142_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_02280_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_02321_" from metal1 to viali in cell fft_wrapper.
+Moving label "_02361_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_02363_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_02398_" from metal1 to viali in cell fft_wrapper.
+Moving label "_02446_" from metal1 to viali in cell fft_wrapper.
+Moving label "_02526_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_02530_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_02538_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_02562_" from metal1 to viali in cell fft_wrapper.
+Moving label "_02591_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_02596_" from metal1 to viali in cell fft_wrapper.
+Moving label "_02632_" from metal1 to viali in cell fft_wrapper.
+Moving label "_02634_" from metal1 to viali in cell fft_wrapper.
+Moving label "_02665_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_02839_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_02914_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_02979_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_02992_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_03003_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_03078_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_03084_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_03192_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_03220_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03238_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_03310_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03400_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_03475_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_03554_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_03637_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_03712_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03755_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03763_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_03776_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_03787_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03826_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03843_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03849_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03888_" from metal1 to viali in cell fft_wrapper.
+Moving label "_03921_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04038_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04072_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_04085_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_04149_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04214_" from metal1 to viali in cell fft_wrapper.
+Moving label "_04238_" from metal1 to viali in cell fft_wrapper.
+Moving label "_04377_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04459_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04465_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_04578_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_04637_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04656_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04800_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04884_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_04939_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_04992_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_05146_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_05260_" from metal1 to viali in cell fft_wrapper.
+Moving label "_05332_" from metal1 to viali in cell fft_wrapper.
+Moving label "_05396_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_05483_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_05592_" from metal1 to viali in cell fft_wrapper.
+Moving label "_05644_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_05676_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_05705_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_05836_" from metal1 to viali in cell fft_wrapper.
+Moving label "_05865_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_05952_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_05986_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_06001_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_06027_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_06132_" from metal1 to viali in cell fft_wrapper.
+Moving label "_06238_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_06328_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_06677_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_06700_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_06781_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_06854_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_06866_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_06972_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_07023_" from metal1 to viali in cell fft_wrapper.
+Moving label "_07085_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07114_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_07182_" from metal1 to viali in cell fft_wrapper.
+Moving label "_07218_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07272_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_07277_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07299_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_07309_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07325_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07343_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07372_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_07378_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_07413_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07498_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07552_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07583_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07593_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_07601_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07714_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07723_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07738_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07774_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07802_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_07851_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07900_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07914_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_07991_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_08011_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_08025_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08123_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_08166_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_08167_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_08193_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_08204_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08279_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08298_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08331_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08345_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08356_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08461_" from metal1 to viali in cell fft_wrapper.
+Moving label "_08507_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_08512_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08515_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08641_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08645_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_08658_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_08678_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08696_" from metal3 to via2 in cell fft_wrapper.
+Moving label "_08733_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08745_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08834_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_08876_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08903_" from metal1 to viali in cell fft_wrapper.
+Moving label "_08932_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08937_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_08996_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_09063_" from metal1 to viali in cell fft_wrapper.
+Moving label "_09181_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_09220_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_09237_" from metal1 to viali in cell fft_wrapper.
+Moving label "_09264_" from metal1 to viali in cell fft_wrapper.
+Moving label "_09440_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_09451_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_09530_" from metal1 to viali in cell fft_wrapper.
+Moving label "_09575_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_09792_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_09800_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_09820_" from metal1 to viali in cell fft_wrapper.
+Moving label "_09834_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_09911_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_09944_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_10013_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_10149_" from metal1 to viali in cell fft_wrapper.
+Moving label "_10229_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_10262_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_10431_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_10447_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_10491_" from metal1 to viali in cell fft_wrapper.
+Moving label "_10570_" from metal1 to viali in cell fft_wrapper.
+Moving label "_10615_" from metal1 to viali in cell fft_wrapper.
+Moving label "_10630_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_10635_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_10790_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_10807_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_10850_" from metal1 to viali in cell fft_wrapper.
+Moving label "_10907_" from metal1 to viali in cell fft_wrapper.
+Moving label "_10943_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_11002_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_11027_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_11086_" from metal1 to viali in cell fft_wrapper.
+Moving label "_11088_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_11122_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_11287_" from metal1 to viali in cell fft_wrapper.
+Moving label "_11316_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_11329_" from metal1 to viali in cell fft_wrapper.
+Moving label "_11460_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_11473_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_11505_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_11666_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_11672_" from metal1 to viali in cell fft_wrapper.
+Moving label "_11695_" from metal1 to viali in cell fft_wrapper.
+Moving label "_11757_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_11763_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_11776_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_11852_" from metal1 to viali in cell fft_wrapper.
+Moving label "_11873_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_11899_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_11927_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_11983_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12039_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_12119_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12126_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12135_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12197_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12218_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_12289_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_12339_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12354_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12357_" from metal3 to via3 in cell fft_wrapper.
+Moving label "_12385_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_12496_" from metal1 to viali in cell fft_wrapper.
+Moving label "_12526_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_12582_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_12796_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_13049_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_13142_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13266_" from metal1 to viali in cell fft_wrapper.
+Moving label "_13291_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13295_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13350_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13415_" from metal1 to viali in cell fft_wrapper.
+Moving label "_13473_" from metal1 to viali in cell fft_wrapper.
+Moving label "_13537_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_13551_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13573_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13580_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_13635_" from metal2 to via1 in cell fft_wrapper.
+Moving label "_13639_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13706_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13760_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_13844_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_13872_" from metal1 to viali in cell fft_wrapper.
+Moving label "_13882_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_14237_" from metal1 to viali in cell fft_wrapper.
+Moving label "_14241_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_14244_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_14370_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_14399_" from metal1 to via1 in cell fft_wrapper.
+Moving label "_14474_" from metal2 to via2 in cell fft_wrapper.
+Moving label "_14501_" from metal2 to via2 in cell fft_wrapper.
+Moving label "clk" from metal2 to via2 in cell fft_wrapper.
+Moving label "clknet_3_0__leaf_clk" from metal2 to via2 in cell fft_wrapper.
+Moving label "clknet_3_1__leaf_clk" from metal2 to via2 in cell fft_wrapper.
+Moving label "clknet_3_6__leaf_clk" from metal2 to via2 in cell fft_wrapper.
+Moving label "clknet_leaf_29_clk" from metal2 to via1 in cell fft_wrapper.
+Moving label "net80" from metal1 to viali in cell fft_wrapper.
+Moving label "out_im[10]" from metal2 to via2 in cell fft_wrapper.
+Moving label "out_re[0]" from metal2 to via2 in cell fft_wrapper.
+Moving label "out_re[12]" from metal2 to via2 in cell fft_wrapper.
+Moving label "u_s1.delay_line_im\[3\]\[11\]" from metal1 to via1 in cell fft_wrapper.
+Moving label "u_s1.delay_line_im\[3\]\[9\]" from metal1 to via1 in cell fft_wrapper.
+Moving label "u_s1.delay_line_im\[5\]\[0\]" from metal1 to via1 in cell fft_wrapper.
+Moving label "u_s1.delay_line_im\[6\]\[0\]" from metal2 to via1 in cell fft_wrapper.
+Moving label "u_s1.delay_line_re\[3\]\[6\]" from metal1 to via1 in cell fft_wrapper.
+Moving label "u_s2.delay_line_im\[0\]\[11\]" from metal1 to via1 in cell fft_wrapper.
+Moving label "u_s2.delay_line_re\[1\]\[11\]" from metal1 to via1 in cell fft_wrapper.
+Moving label "u_s2.delay_line_re\[2\]\[6\]" from metal1 to via1 in cell fft_wrapper.
+[INFO]: Writing abstract LEF
+Generating LEF output /openlane/designs/FFT/runs/full_flow_4/results/signoff/fft_wrapper.lef for cell fft_wrapper:
+Diagnostic:  Write LEF header for cell fft_wrapper
+Diagnostic:  Writing LEF output for cell fft_wrapper
+Diagnostic:  Scale value is 0.005000
+[INFO]: LEF Write Complete

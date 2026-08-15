@@ -1,0 +1,36 @@
+
+64. Executing CHECK pass (checking for obvious problems).
+Checking module fft_wrapper...
+Warning: Wire fft_wrapper.\out_re [15] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [14] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [13] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [12] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [11] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [10] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [9] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [8] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [7] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [6] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [5] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [4] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [3] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [2] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [1] is used but has no driver.
+Warning: Wire fft_wrapper.\out_re [0] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [15] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [14] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [13] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [12] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [11] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [10] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [9] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [8] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [7] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [6] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [5] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [4] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [3] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [2] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [1] is used but has no driver.
+Warning: Wire fft_wrapper.\out_im [0] is used but has no driver.
+Found and reported 32 problems.

@@ -1,0 +1,104 @@
+%Warning-EOFNEWLINE: /openlane/designs/FFT/src/fft_wrapper.v:96:10: Missing newline at end of file (POSIX 3.206).
+                                                                  : ... Suggest add newline.
+   96 | endmodule
+      |          ^
+                     ... For warning description see https://verilator.org/warn/EOFNEWLINE?v=5.009
+                     ... Use "/* verilator lint_off EOFNEWLINE */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: /openlane/designs/FFT/src/fft_wrapper.v:77:10: Cell pin connected by name with empty reference: 'twiddle_addr'
+   77 |         .twiddle_addr(),                     
+      |          ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/FFT/src/fft_wrapper.v:92:10: Cell pin connected by name with empty reference: 'twiddle_addr'
+   92 |         .twiddle_addr(),                      
+      |          ^~~~~~~~~~~~
+%Warning-TIMESCALEMOD: /openlane/designs/FFT/src/twiddle_rom.v:2:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    2 | module twiddle_rom #(
+      |        ^~~~~~~~~~~
+                       /openlane/designs/FFT/src/butterfly.v:4:8: ... Location of module with timescale
+    4 | module butterfly #(
+      |        ^~~~~~~~~
+%Warning-TIMESCALEMOD: /openlane/designs/FFT/src/cmult.v:7:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+    7 | module cmult #(
+      |        ^~~~~
+                       /openlane/designs/FFT/src/butterfly.v:4:8: ... Location of module with timescale
+    4 | module butterfly #(
+      |        ^~~~~~~~~
+%Warning-WIDTHTRUNC: /openlane/designs/FFT/src/cmult.v:35:19: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's SHIFTRS generates 33 bits.
+                                                            : ... In instance fft_wrapper.u_s2.g_mult.u_mul
+   35 | assign product_re = (full_precision_real + (1 <<< (TWIDDLE_FRAC_BITS - 1))) >>> TWIDDLE_FRAC_BITS;
+      |                   ^
+%Warning-WIDTHTRUNC: /openlane/designs/FFT/src/cmult.v:36:19: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's SHIFTRS generates 33 bits.
+                                                            : ... In instance fft_wrapper.u_s2.g_mult.u_mul
+   36 | assign product_im = (full_precision_imag + (1 <<< (TWIDDLE_FRAC_BITS - 1))) >>> TWIDDLE_FRAC_BITS;
+      |                   ^
+%Warning-WIDTHTRUNC: /openlane/designs/FFT/src/sdf_stage.v:82:48: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's SHIFTRS generates 17 bits.
+                                                                : ... In instance fft_wrapper.u_s4
+   82 |     wire signed [DATA_WIDTH-1:0] scaled_sum_re = butterfly_sum_re  >>> 1;
+      |                                                ^
+%Warning-WIDTHTRUNC: /openlane/designs/FFT/src/sdf_stage.v:83:48: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's SHIFTRS generates 17 bits.
+                                                                : ... In instance fft_wrapper.u_s4
+   83 |     wire signed [DATA_WIDTH-1:0] scaled_sum_im = butterfly_sum_im  >>> 1;
+      |                                                ^
+%Warning-WIDTHTRUNC: /openlane/designs/FFT/src/sdf_stage.v:84:49: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's SHIFTRS generates 17 bits.
+                                                                : ... In instance fft_wrapper.u_s4
+   84 |     wire signed [DATA_WIDTH-1:0] scaled_diff_re = butterfly_diff_re >>> 1;
+      |                                                 ^
+%Warning-WIDTHTRUNC: /openlane/designs/FFT/src/sdf_stage.v:85:49: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's SHIFTRS generates 17 bits.
+                                                                : ... In instance fft_wrapper.u_s4
+   85 |     wire signed [DATA_WIDTH-1:0] scaled_diff_im = butterfly_diff_im >>> 1;
+      |                                                 ^
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/sdf_stage.v:91:43: Operator EQ expects 32 or 2 bits on the LHS, but LHS's VARREF 'twiddle_addr' generates 1 bits.
+                                                                 : ... In instance fft_wrapper.u_s3
+   91 |     wire twiddle_is_neg_j = (twiddle_addr == (DELAY_DEPTH >> 1));  
+      |                                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/sdf_stage.v:141:37: Operator EQ expects 32 or 2 bits on the LHS, but LHS's VARREF 'delay_ptr' generates 1 bits.
+                                                                  : ... In instance fft_wrapper.u_s3
+  141 |             delay_ptr <= (delay_ptr == DELAY_DEPTH-1)     ? 0 : delay_ptr + 1;
+      |                                     ^~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/twiddle_rom.v:18:14: Operator CASE expects 3 bits on the Case expression, but Case expression's VARREF 'addr' generates 2 bits.
+                                                                   : ... In instance fft_wrapper.u_rom2
+   18 |              case (addr)
+      |              ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/sdf_stage.v:91:43: Operator EQ expects 32 or 3 bits on the LHS, but LHS's VARREF 'twiddle_addr' generates 2 bits.
+                                                                 : ... In instance fft_wrapper.u_s2
+   91 |     wire twiddle_is_neg_j = (twiddle_addr == (DELAY_DEPTH >> 1));  
+      |                                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/sdf_stage.v:141:37: Operator EQ expects 32 or 3 bits on the LHS, but LHS's VARREF 'delay_ptr' generates 2 bits.
+                                                                  : ... In instance fft_wrapper.u_s2
+  141 |             delay_ptr <= (delay_ptr == DELAY_DEPTH-1)     ? 0 : delay_ptr + 1;
+      |                                     ^~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/sdf_stage.v:91:43: Operator EQ expects 32 or 4 bits on the LHS, but LHS's VARREF 'twiddle_addr' generates 3 bits.
+                                                                 : ... In instance fft_wrapper.u_s4
+   91 |     wire twiddle_is_neg_j = (twiddle_addr == (DELAY_DEPTH >> 1));  
+      |                                           ^~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/sdf_stage.v:141:37: Operator EQ expects 32 or 4 bits on the LHS, but LHS's VARREF 'delay_ptr' generates 3 bits.
+                                                                  : ... In instance fft_wrapper.u_s4
+  141 |             delay_ptr <= (delay_ptr == DELAY_DEPTH-1)     ? 0 : delay_ptr + 1;
+      |                                     ^~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/twiddle_rom.v:59:13: Operator CASE expects 3 bits on the Case Item, but Case Item's CONST '2'h0' generates 2 bits.
+                                                                   : ... In instance fft_wrapper.u_rom2
+   59 |             case (addr)
+      |             ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/twiddle_rom.v:59:13: Operator CASE expects 3 bits on the Case Item, but Case Item's CONST '2'h1' generates 2 bits.
+                                                                   : ... In instance fft_wrapper.u_rom2
+   59 |             case (addr)
+      |             ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/twiddle_rom.v:59:13: Operator CASE expects 3 bits on the Case Item, but Case Item's CONST '2'h2' generates 2 bits.
+                                                                   : ... In instance fft_wrapper.u_rom2
+   59 |             case (addr)
+      |             ^~~~
+%Warning-WIDTHEXPAND: /openlane/designs/FFT/src/twiddle_rom.v:59:13: Operator CASE expects 3 bits on the Case Item, but Case Item's CONST '2'h3' generates 2 bits.
+                                                                   : ... In instance fft_wrapper.u_rom2
+   59 |             case (addr)
+      |             ^~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/FFT/src/sdf_stage.v:36:44: Signal is not used: 'w_re'
+                                                                  : ... In instance fft_wrapper.u_s3
+   36 |     input  wire signed [TWIDDLE_WIDTH-1:0] w_re,      
+      |                                            ^~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/FFT/src/sdf_stage.v:37:44: Signal is not used: 'w_im'
+                                                                  : ... In instance fft_wrapper.u_s3
+   37 |     input  wire signed [TWIDDLE_WIDTH-1:0] w_im,
+      |                                            ^~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/FFT/src/sdf_stage.v:91:10: Signal is not used: 'twiddle_is_neg_j'
+                                                                  : ... In instance fft_wrapper.u_s3
+   91 |     wire twiddle_is_neg_j = (twiddle_addr == (DELAY_DEPTH >> 1));  
+      |          ^~~~~~~~~~~~~~~~

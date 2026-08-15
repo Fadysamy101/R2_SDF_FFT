@@ -1,0 +1,25 @@
+
+57. Printing statistics.
+
+=== fft_wrapper ===
+
+   Number of wires:              16348
+   Number of wire bits:          16991
+   Number of public wires:          55
+   Number of public wire bits:     698
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              16950
+     $_ANDNOT_                    5174
+     $_AND_                        169
+     $_MUX_                       1039
+     $_NAND_                       289
+     $_NOR_                       1733
+     $_NOT_                        888
+     $_ORNOT_                      290
+     $_OR_                        1803
+     $_XNOR_                      1562
+     $_XOR_                       3506
+     sky130_fd_sc_hd__dfrtp_2      497
+

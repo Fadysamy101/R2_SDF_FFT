@@ -1,0 +1,7 @@
+Warning: /openlane/designs/FFT/runs/full_flow_4/results/routing/fft_wrapper.nl.v line 66223, module sky130_fd_sc_hd__tapvpwrvgnd_1 not found. Creating black box for TAP_554.
+Warning: /openlane/designs/FFT/runs/full_flow_4/results/routing/fft_wrapper.nl.v line 74932, module sky130_ef_sc_hd__decap_12 not found. Creating black box for FILLER_0_0_6.
+Warning: /openlane/designs/FFT/runs/full_flow_4/results/routing/fft_wrapper.nl.v line 74934, module sky130_fd_sc_hd__fill_2 not found. Creating black box for FILLER_0_0_26.
+Warning: /openlane/designs/FFT/runs/full_flow_4/results/routing/fft_wrapper.nl.v line 74950, module sky130_fd_sc_hd__fill_1 not found. Creating black box for FILLER_0_0_177.
+Warning: There are 34 input ports missing set_input_delay.
+Warning: There are 32 unconstrained endpoints.
+[WARNING] Did not save OpenROAD database!
