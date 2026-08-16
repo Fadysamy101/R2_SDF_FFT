@@ -9,7 +9,7 @@ nSeeds  = 100;
 brIdx = bit_reverse_index(N);
 
 % Types
-T  = sdf_types('fixed');   % fixed-point MEX model
+T  = sdf_types('single');   % fixed-point MEX model
 Td = sdf_types('double');   % double-precision reference
 
 %% ---- Build MEX once ----

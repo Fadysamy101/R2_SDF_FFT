@@ -1,0 +1,21 @@
+# Simulation
+work/
+*.wlf
+*.vcd
+transcript
+
+# Vivado
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+.Xil/
+
+# MATLAB generated
+fiaccel/
+instrumentation/
+
+# Editor/tool files
+.vscode/
+.slang/
